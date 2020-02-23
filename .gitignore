@@ -33,6 +33,8 @@ speed-measure-plugin*.json
 
 # misc
 /.env
+/.firebase
+/.runtimeconfig.json
 /.sass-cache
 /connect.lock
 /coverage
