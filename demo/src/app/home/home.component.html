@@ -1,0 +1,16 @@
+<div fxLayout="column"
+     fxLayoutAlign="center center"
+     fxLayoutGap="32px">
+    <h1 [class.mat-display-3]="screen.isXsOrSm"
+        [class.mat-display-4]="!screen.isXsOrSm">
+        Hello, I'm&nbsp;<strong>Kailin</strong>.
+    </h1>
+    <h3 class="subtitle"
+        [class.mat-headline]="screen.isXsOrSm"
+        [class.mat-display-2]="!screen.isXsOrSm">
+        A senior front-end developer & designer based in Chicago.
+    </h3>
+    <button color="primary"
+            mat-flat-button
+            [routerLink]="['/resume']">Resume</button>
+</div>

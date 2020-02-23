@@ -1,0 +1,34 @@
+<div fxLayout="row"
+     fxLayoutAlign="space-between center">
+  <h2 fxFlex
+      class="mat-headline no-margin">Skills</h2>
+  <button color="primary"
+          mat-icon-button
+          (click)="toggleView()">
+    <mat-icon [svgIcon]="minViewActive ? 'grow' : 'shrink'"></mat-icon>
+  </button>
+  <!-- [disabled]="minViewActive" -->
+  <button color="primary"
+          mat-icon-button
+          (click)="toggleAccordion()">
+    <mat-icon [svgIcon]="(!allCollapsed ? 'collapse' : 'expand') + '-all'"></mat-icon>
+  </button>
+</div>
+<mat-accordion #skillAccordion="matAccordion"
+               multi="true">
+  <mat-expansion-panel [(expanded)]="skill.isExpanded"
+                       *ngFor="let skill of skills; let index">
+    <mat-expansion-panel-header>{{ skill.section }}</mat-expansion-panel-header>
+    <mat-list dense>
+      <mat-list-item *ngFor="let item of skill.items"
+                     [@activeViewToggled]="minViewActive ? 'minimal' : 'detailed'">
+        <img matListAvatar
+             [src]="(item | snakeCase) | imageUrl:'skills'"
+             [matTooltip]="minViewActive ? item : null" />
+        <p matLine>
+          {{ item }}
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+</mat-accordion>

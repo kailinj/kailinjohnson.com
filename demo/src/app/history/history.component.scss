@@ -1,0 +1,28 @@
+$datesWidth: 70px;
+
+.mat-headline {
+  color: white;
+}
+
+.mat-title,
+.mat-subheading-1 {
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.mat-body-2 {
+  margin: 16px 0;
+}
+
+.history-dates {
+  width: $datesWidth;
+  min-width: $datesWidth;
+}
+
+.history-details {
+  margin-left: $datesWidth;
+}
+
+.mat-card-header-text {
+  order: 2;
+}

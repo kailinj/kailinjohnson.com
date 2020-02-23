@@ -1,0 +1,23 @@
+.skill-logo {
+  height: 30px;
+  border-radius: 50%;
+}
+
+h2 {
+  color: white;
+}
+
+mat-list[dense] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  mat-list-item.mat-list-item {
+    display: inline-block;
+    transition: all 500ms ease-in-out;
+  }
+}
+
+// mat-expansion-panel {
+//   background-color: #80DEEA;
+// }

@@ -1,0 +1,75 @@
+// Import theming functions
+@import './../../theme.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: stretch;
+  flex: 0 0 100%;
+}
+
+mat-sidenav-container,
+mat-sidenav-content {
+  background-color: transparent;
+}
+
+@mixin contentHeight($offset) {
+
+  mat-sidenav-container,
+  mat-sidenav-content,
+  .scroll-content {
+    $totalHeight: calc(100vh - #{$offset});
+    height: $totalHeight;
+    min-height: $totalHeight;
+    transition: height 500ms ease-in-out;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  @include contentHeight(64px);
+}
+
+@media screen and (max-width: 599px) {
+  @include contentHeight(56px);
+}
+
+mat-toolbar {
+  z-index: 10;
+}
+
+.resume-toolbar {
+  transition: margin 500ms ease-in-out;
+  font-size: 13px;
+
+  &.hidden {
+    margin-top: -64px;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    +span {
+      margin: 0;
+    }
+  }
+}
+
+.resume-content {
+
+  .mat-headline {
+    color: white;
+  }
+}
+
+.scroll-content {
+  padding: 16px 16px 40px 16px;
+  overflow-y: auto;
+}
+
+.skills-sidenav {
+  background-color: mat-color($kj-accent, 400);
+  width: 275px;
+}
