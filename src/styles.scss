@@ -1,11 +1,13 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
-$kj-typography: mat-typography-config($font-family: 'Chivo, Roboto, monospace');
+$kj-typography: mat-typography-config(
+  $font-family: "Chivo, Roboto, monospace"
+);
 // $headline: mat-typography-level(32px, 48px, 700),
 // $body-1: mat-typography-level(16px, 24px, 500));
 
@@ -14,11 +16,10 @@ $kj-typography: mat-typography-config($font-family: 'Chivo, Roboto, monospace');
 // Be sure that you only ever include this mixin once!
 @include mat-core($kj-typography);
 
-
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@import './theme.scss';
+@import "./theme.scss";
 @include angular-material-theme($kj-theme);
 
 /* You can add global styles to this file, and also import other style files */
@@ -32,9 +33,7 @@ body {
 
 body {
   margin: 0;
-  background-image: linear-gradient(109.6deg,
-      #673AB7 11.2%,
-      #00E5FF 91.1%);
+  background-image: linear-gradient(109.6deg, #673ab7 11.2%, #00e5ff 91.1%);
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: auto;
@@ -58,7 +57,7 @@ mat-card-header.m-card-header-bordered {
 // Angular Material overrides
 
 // Offset mat-card-title margin bottom
-mat-card>mat-card-header:first-child:last-child .mat-card-subtitle {
+mat-card > mat-card-header:first-child:last-child .mat-card-subtitle {
   margin-bottom: 0;
 }
 
@@ -71,14 +70,21 @@ mat-card>mat-card-header:first-child:last-child .mat-card-subtitle {
   }
 }
 
-.mat-card-subtitle>div:not(:last-child) {
+.mat-card-subtitle > div:not(:last-child) {
   margin-bottom: 3px;
   color: #555;
 }
 
 .dark-theme .mat-expansion-panel,
-.dark-theme .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+.dark-theme
+  .mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
+  .mat-expansion-panel-header:hover {
   background-color: #5c5c5c !important;
+}
+
+.ng-native-scrollbar-hider.ng-scroll-viewport {
+  height: 100%;
+  width: 100%;
 }
 
 // Custom global styles
@@ -86,7 +92,7 @@ mat-card>mat-card-header:first-child:last-child .mat-card-subtitle {
 ul {
   padding-left: 14px;
 
-  >li {
+  > li {
     margin-bottom: 6px;
   }
 }

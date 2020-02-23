@@ -2,20 +2,19 @@
      fxLayout="column"
      fxLayoutAlign="start stretch">
   <mat-toolbar class="mat-elevation-z2 resume-toolbar"
-               color="primary"
-               [class.hidden]="!showToolbar">
+               color="primary">
     <mat-toolbar-row>
       <div fxFlex
            fxLayout="row"
            fxLayoutAlign="start center"
            fxLayoutGap="8px">
-        <button mat-icon-button
+        <!-- <button mat-icon-button
                 (click)="goBack()">
           <mat-icon>arrow_back</mat-icon>
-        </button>
+        </button> -->
         <img class="avatar"
              src="assets/img/me.png" />
-        <span [class]="media.isActive('xs') ? 'mat-subheading-1' : 'mat-headline'"
+        <span [class]="media.isActive('xs') ? 'mat-title' : 'mat-headline'"
               fxFlex>Kailin Johnson</span>
         <ng-container *ngFor="let method of contactMethods">
           <ng-container *ngIf="method.url">
@@ -49,9 +48,6 @@
             <span>{{ method.value }}</span>
           </div>
         </ng-container>
-        <button mat-stroked-button
-                *ngIf="screenIsXsOrSm"
-                (click)="sidenav.toggle()">Skills</button>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -66,10 +62,13 @@
       </section>
     </mat-sidenav>
     <mat-sidenav-content class="resume-content">
-      <div class="scroll-content"
-           fxLayout="column"
-           fxLayoutAlign="start stretch"
-           fxLayoutGap="16px">
+      <ng-scrollbar fxLayout="column"
+                    fxLayoutAlign="start stretch"
+                    fxLayoutGap="16px">
+        <!-- <div class="scroll-content"
+             fxLayout="column"
+             fxLayoutAlign="start stretch"
+             fxLayoutGap="16px"> -->
         <section>
           <h2 class="mat-headline">Overview</h2>
           <mat-card>
@@ -84,7 +83,11 @@
           <app-history title="Education"
                        [history]="education"></app-history>
         </section>
-      </div>
+        <section *ngIf="screenIsXsOrSm">
+          <app-skills></app-skills>
+        </section>
+        <!-- </div> -->
+      </ng-scrollbar>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

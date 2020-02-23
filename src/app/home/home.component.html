@@ -10,7 +10,15 @@
         [class.mat-display-2]="!screen.isXsOrSm">
         A senior front-end developer & designer based in Chicago.
     </h3>
-    <button color="primary"
-            mat-flat-button
-            [routerLink]="['/resume']">Resume</button>
+    <div fxLayout="row"
+         fxLayoutAlign="center center"
+         fxLayoutGap="8px">
+        <button color="primary"
+                mat-flat-button
+                [routerLink]="['/resume']">Resume</button>
+        <a color="accent"
+           mat-flat-button
+           href="https://github.com/kailinj"
+           target="_blank">GitHub</a>
+    </div>
 </div>
