@@ -1,14 +1,21 @@
 {
   "hosting": {
     "public": "dist/demo",
-    "ignore": [".env", "firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": [
+      ".env",
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
     ],
-    "predeploy": ["ng build"]
+    "predeploy": [
+      "yarn build"
+    ]
   },
   "functions": {
     "predeploy": [
