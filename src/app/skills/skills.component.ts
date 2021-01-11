@@ -1,5 +1,6 @@
 import { state, style, trigger } from '@angular/animations';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
 import { MatAccordion } from '@angular/material/expansion';
 
 import { skills } from './skills.constants';
@@ -11,6 +12,7 @@ import { skills } from './skills.constants';
   animations: [
     trigger(`activeViewToggled`, [
       state(`detailed`, style({ width: "100%", "margin-top": "0" })),
+      state(`detailed-sm`, style({ width: "auto", "margin-top": "0" })),
       state(`minimal`, style({ width: "40px", "margin-top": "-5px" }))
     ])
   ]
@@ -33,7 +35,11 @@ export class SkillsComponent implements OnInit {
     return new Set([...this.skills].map(s => s.isExpanded));
   }
 
-  constructor() {}
+  get screenIsXsOrSm() {
+    return this.media.isActive("xs") || this.media.isActive("sm");
+  }
+
+  constructor(public media: MediaObserver) {}
 
   ngOnInit() {
     this.skills.forEach(s => (s.isExpanded = true));

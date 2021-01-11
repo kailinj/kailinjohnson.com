@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { FirebaseApp } from '@angular/fire';
-import { AngularFireFunctions } from '@angular/fire/functions';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
@@ -19,14 +17,9 @@ export class AppComponent {
   public title = "Kailin Johnson";
 
   constructor(
-    app: FirebaseApp,
-    fns: AngularFireFunctions,
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer
   ) {
-    console.log(app);
-    const callable = fns.httpsCallable("helloWorld");
-    this.config$ = callable({ name: "some-data" });
     this.icons.forEach(i => {
       iconRegistry.addSvgIcon(
         i,

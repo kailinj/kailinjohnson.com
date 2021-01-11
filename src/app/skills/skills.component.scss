@@ -17,11 +17,16 @@ mat-list[dense] {
   flex-wrap: wrap;
 
   mat-list-item.mat-list-item {
-    display: inline-block;
+    overflow: hidden;
+    display: inline-flex;
     transition: all 500ms ease-in-out;
   }
 }
 
-// mat-expansion-panel {
-//   background-color: #80DEEA;
-// }
+@media screen and (max-width: 959px) {
+  mat-list[dense] mat-list-item.mat-list-item {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}

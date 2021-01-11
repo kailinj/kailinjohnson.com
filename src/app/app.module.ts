@@ -2,8 +2,6 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireFunctionsModule, ORIGIN } from '@angular/fire/functions';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -36,8 +34,6 @@ import { ResumeModule } from './resume/resume.module';
     A11yModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireFunctionsModule,
     FlexLayoutModule,
     HttpClientModule,
     NgScrollbarModule,
@@ -48,11 +44,7 @@ import { ResumeModule } from './resume/resume.module';
   exports: [],
   bootstrap: [AppComponent],
   providers: [
-    ScreenService,
-    {
-      provide: ORIGIN,
-      useValue: "https://kailinjohnson-f334b.web.app"
-    }
+    ScreenService
   ]
 })
 export class AppModule {
