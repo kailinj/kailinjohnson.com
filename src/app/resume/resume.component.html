@@ -1,70 +1,37 @@
-<div fxFlexFill
-     fxLayout="column"
-     fxLayoutAlign="start stretch">
-  <mat-toolbar class="mat-elevation-z2 resume-toolbar"
-               color="primary">
+<div fxFlexFill fxLayout="column" fxLayoutAlign="start stretch">
+  <mat-toolbar class="mat-elevation-z2 resume-toolbar">
     <mat-toolbar-row>
-      <div fxFlex
-           fxLayout="row"
-           fxLayoutAlign="start center"
-           fxLayoutGap="8px">
-        <!-- <button mat-icon-button
-                (click)="goBack()">
-          <mat-icon>arrow_back</mat-icon>
-        </button> -->
-        <img class="avatar"
-             src="assets/img/me.png" />
-        <span [class]="media.isActive('xs') ? 'mat-title' : 'mat-headline'"
-              fxFlex>Kailin Johnson</span>
-        <ng-container *ngFor="let method of contactMethods">
-          <ng-container *ngIf="method.url">
-            <a color="primary"
-               mat-flat-button
-               *ngIf="!screenIsXsOrSm"
-               [href]="method.url">
-              <div fxLayout="row"
-                   fxLayoutAlign="start center"
-                   fxLayoutGap="4px">
-                <img class="icon-24"
-                     [src]="method.icon | imageUrl:'contact'" />
-                <span *ngIf="!screenIsXsOrSm">{{ method.value }}</span>
-              </div>
-            </a>
-            <a color="primary"
-               mat-icon-button
-               *ngIf="screenIsXsOrSm"
-               [href]="method.url">
-              <img class="icon-24"
-                   [src]="method.icon | imageUrl:'contact'" />
-            </a>
-          </ng-container>
-          <div fxLayout="row"
-               fxLayoutAlign="start center"
-               fxLayoutGap="4px"
-               style="padding: 0 16px"
-               *ngIf="!method.url && !screenIsXsOrSm">
-            <img class="icon-24"
-                 [src]="method.icon | imageUrl:'contact'" />
-            <span>{{ method.value }}</span>
-          </div>
-        </ng-container>
+      <div fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+        <button mat-icon-button (click)="goBack()">
+          <mat-icon svgIcon="back"></mat-icon>
+        </button>
+        <img class="avatar" src="assets/img/me.png" />
+        <span
+          fxFlex
+          [class]="media.isActive('xs') ? 'mat-title' : 'mat-display-1'"
+          >Kailin Johnson</span
+        >
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-sidenav-container>
-    <mat-sidenav class="skills-sidenav"
-                 [mode]="screenIsXsOrSm ? 'over' : 'side'"
-                 [opened]="sidenavOpen"
-                 position="left"
-                 #sidenav>
+    <mat-sidenav
+      class="skills-sidenav"
+      position="left"
+      #sidenav
+      [mode]="screenIsXsOrSm ? 'over' : 'side'"
+      [opened]="sidenavOpen"
+    >
       <section class="section-padded">
         <app-skills></app-skills>
       </section>
     </mat-sidenav>
     <mat-sidenav-content class="resume-content">
-      <ng-scrollbar fxLayout="column"
-                    fxLayoutAlign="start stretch"
-                    fxLayoutGap="16px">
+      <ng-scrollbar
+        fxLayout="column"
+        fxLayoutAlign="start stretch"
+        fxLayoutGap="16px"
+      >
         <!-- <div class="scroll-content"
              fxLayout="column"
              fxLayoutAlign="start stretch"
@@ -76,12 +43,10 @@
           </mat-card>
         </section>
         <section>
-          <app-history title="Experience"
-                       [history]="experience"></app-history>
+          <app-history title="Experience" [history]="experience"></app-history>
         </section>
         <section>
-          <app-history title="Education"
-                       [history]="education"></app-history>
+          <app-history title="Education" [history]="education"></app-history>
         </section>
         <section *ngIf="screenIsXsOrSm">
           <app-skills></app-skills>

@@ -1,22 +1,8 @@
-export const contactMethods: any[] = [
-  {
-    // icon: 'pin_drop',
-    icon: "location",
-    value: "Chicago, IL 60654"
-  },
-  {
-    // icon: 'phone',
-    icon: "phone",
-    url: "tel:+13128417566",
-    value: "312.841.7566"
-  },
-  {
-    // icon: 'mail',
-    icon: "email",
-    url: "mailto:kailin.johnson@gmail.com",
-    value: "kailin.johnson@gmail.com"
-  }
-];
+export const animationConfig = {
+  easing: "500ms cubic-bezier(0.35, 0, 0.25, 1)",
+  in: { opacity: 1, transform: "none" },
+  out: { opacity: 0, transform: "translateY(-65px)" }
+};
 export const education: any[] = [
   {
     dates: [`Aug 2007`, `Dec 2011`],
@@ -40,6 +26,17 @@ export const education: any[] = [
   }
 ];
 export const experience: any[] = [
+  {
+    dates: [`Jun 2020`, `Present`],
+    details: [],
+    location: {
+      city: `Chicago, IL`,
+      logo: `tmp`,
+      name: `The Mom Project`
+    },
+    title: `Senior Software Engineer`,
+    url: `https://www.themomproject.com/`
+  },
   {
     dates: [`Jun 2016`, `Jan 2020`],
     details: [

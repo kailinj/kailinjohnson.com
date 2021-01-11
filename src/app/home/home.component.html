@@ -1,24 +1,27 @@
-<div fxLayout="column"
-     fxLayoutAlign="center center"
-     fxLayoutGap="32px">
-    <h1 [class.mat-display-3]="screen.isXsOrSm"
-        [class.mat-display-4]="!screen.isXsOrSm">
-        Hello, I'm&nbsp;<strong>Kailin</strong>.
-    </h1>
-    <h3 class="subtitle"
-        [class.mat-headline]="screen.isXsOrSm"
-        [class.mat-display-2]="!screen.isXsOrSm">
-        A senior front-end developer & designer based in Chicago.
-    </h3>
-    <div fxLayout="row"
-         fxLayoutAlign="center center"
-         fxLayoutGap="8px">
-        <button color="primary"
-                mat-flat-button
-                [routerLink]="['/resume']">Resume</button>
-        <a color="accent"
-           mat-flat-button
-           href="https://github.com/kailinj"
-           target="_blank">GitHub</a>
-    </div>
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="32px">
+  <h1
+    [class.mat-display-3]="screen.isXsOrSm"
+    [class.mat-display-4]="!screen.isXsOrSm"
+  >
+    Hello, I'm&nbsp;<strong>Kailin</strong>.
+  </h1>
+  <h3
+    class="subtitle"
+    [class.mat-display-2]="!screen.isXsOrSm"
+    [class.mat-headline]="screen.isXsOrSm"
+  >
+    A senior front-end developer & designer based in Chicago.
+  </h3>
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="16px">
+    <button color="accent" mat-flat-button [routerLink]="['/resume']">
+      Resume
+    </button>
+    <a
+      color="primary"
+      href="https://github.com/kailinj"
+      mat-flat-button
+      target="_blank"
+      >GitHub</a
+    >
+  </div>
 </div>

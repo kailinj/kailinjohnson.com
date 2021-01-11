@@ -35,6 +35,8 @@ mat-sidenav-content {
 
 mat-toolbar {
   z-index: 10;
+  background-color: #000000b3;
+  color: white;
 }
 
 .resume-toolbar {
@@ -58,7 +60,7 @@ mat-toolbar {
 
 .resume-content {
   .mat-headline {
-    color: white;
+    color: #222;
     margin-bottom: 12px;
     line-height: 40px;
   }
@@ -70,7 +72,7 @@ mat-toolbar {
 }
 
 .skills-sidenav {
-  background-color: mat-color($kj-accent, 400);
+  background-color: #00000042;
   width: 275px;
 }
 

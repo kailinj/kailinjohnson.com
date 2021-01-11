@@ -15,7 +15,7 @@ import { routeTransitionAnimations } from './route-transition-animations';
 })
 export class AppComponent {
   public config$;
-  public icons = [`collapse-all`, `expand-all`, `grow`, `shrink`];
+  public icons = [`back`, `collapse-all`, `expand-all`, `grow`, `shrink`];
   public title = "Kailin Johnson";
 
   constructor(

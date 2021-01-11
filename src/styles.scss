@@ -6,7 +6,7 @@
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 $kj-typography: mat-typography-config(
-  $font-family: "Chivo, Roboto, monospace"
+  $font-family: "Chivo, Roboto, monospace",
 );
 // $headline: mat-typography-level(32px, 48px, 700),
 // $body-1: mat-typography-level(16px, 24px, 500));
@@ -33,10 +33,10 @@ body {
 
 body {
   margin: 0;
-  background-image: linear-gradient(109.6deg, #673ab7 11.2%, #00e5ff 91.1%);
+  background-image: url("./assets/img/bg.png");
+  background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: auto;
 }
 
 // Custom Angular Material variations
@@ -76,9 +76,7 @@ mat-card > mat-card-header:first-child:last-child .mat-card-subtitle {
 }
 
 .dark-theme .mat-expansion-panel,
-.dark-theme
-  .mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
-  .mat-expansion-panel-header:hover {
+.dark-theme .mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"]) .mat-expansion-panel-header:hover {
   background-color: #5c5c5c !important;
 }
 

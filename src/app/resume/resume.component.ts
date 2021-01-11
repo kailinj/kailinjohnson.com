@@ -4,7 +4,7 @@ import { MediaObserver } from '@angular/flex-layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
-import { contactMethods, education, experience, overview } from './resume.constants';
+import { animationConfig, education, experience, overview } from './resume.constants';
 
 @Component({
   selector: "app-resume",
@@ -14,33 +14,26 @@ import { contactMethods, education, experience, overview } from './resume.consta
     trigger("pageAnimations", [
       transition(":enter", [
         query(".mat-toolbar", [
-          style({ opacity: 0, transform: "translateY(-65px)" }),
+          style(animationConfig.out),
           animate(
-            "500ms cubic-bezier(0.35, 0, 0.25, 1)",
-            style({ opacity: 1, transform: "none" })
+            `500ms ${animationConfig.easing}`,
+            style(animationConfig.in)
           )
         ]),
         query(".mat-sidenav-container", [
-          style({ opacity: 0, transform: "translateY(-65px)" }),
+          style(animationConfig.out),
           animate(
-            "500ms cubic-bezier(0.35, 0, 0.25, 1)",
-            style({ opacity: 1, transform: "none" })
+            animationConfig.easing,
+            style(animationConfig.in)
           )
         ])
       ]),
       transition(":leave", [
-        query(".mat-toolbar", [
-          style({ opacity: 1, transform: "none" }),
+        query(".mat-toolbar, .mat-sidenav-container", [
+          style(animationConfig.in),
           animate(
-            "500ms cubic-bezier(0.35, 0, 0.25, 1)",
-            style({ opacity: 0, transform: "translateY(-65px)" })
-          )
-        ]),
-        query(".mat-sidenav-container", [
-          style({ opacity: 1, transform: "none" }),
-          animate(
-            "500ms cubic-bezier(0.35, 0, 0.25, 1)",
-            style({ opacity: 0, transform: "translateY(-65px)" })
+            animationConfig.easing,
+            style(animationConfig.out)
           )
         ])
       ])
@@ -60,12 +53,11 @@ export class ResumeComponent implements OnInit {
     return !this.screenIsXsOrSm && this.showSidenav;
   }
 
-  public contactMethods: any[] = contactMethods;
   public education: any[] = education;
   public experience: any[] = experience;
   public overview: string = overview;
-  public showToolbar: boolean = false;
   public showSidenav: boolean = false;
+  public showToolbar: boolean = false;
 
   constructor(private router: Router, public media: MediaObserver) {}
 

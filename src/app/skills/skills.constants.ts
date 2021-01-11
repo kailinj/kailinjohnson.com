@@ -40,7 +40,7 @@ export const skills: any[] = [
   },
   {
     section: `JS Frameworks`,
-    items: [`Angular`, `Cordova`, `Ionic`]
+    items: [`Angular`, `Cordova`, `Ionic`, `React`, `Vue`]
   },
   {
     section: `CSS Frameworks`,
