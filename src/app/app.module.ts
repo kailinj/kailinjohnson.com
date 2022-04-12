@@ -13,8 +13,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
-import { PipesModule } from './+pipes/pipes.module';
-import { ScreenService } from './+services/screen.service';
+import { PipesModule } from './pipes/pipes.module';
+import { ScreenService } from './services/screen.service';
 import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

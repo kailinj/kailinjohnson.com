@@ -10,7 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
-import { PipesModule } from './../+pipes/pipes.module';
+import { PipesModule } from './../pipes/pipes.module';
 import { HistoryModule } from './../history/history.module';
 import { SkillsModule } from './../skills/skills.module';
 import { ResumeComponent } from './resume.component';
