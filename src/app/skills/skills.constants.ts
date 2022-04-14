@@ -3,77 +3,61 @@ export const skills: any[] = [
     section: `Software`,
     items: [
       `Adobe Illustrator`,
-      `Android Studio`,
-      `MS SQL Server`,
-      `Postman`,
-      `Visual Studio Code`,
-      `Xcode`
-    ]
-  },
-  {
-    section: `Web Services`,
-    items: [
-      `Apple Developer`,
-      `App Store Connect`,
-      `Amazon Web Services`,
-      `Azure DevOps`,
-      `Fabric`,
-      `Firebase`,
+      `Coda`,
+      `ClickUp`,
+      `Figma`,
       `GitHub`,
-      `Google Play Console`,
-      `HockeyApp`,
-      `Jenkins`
-    ]
+      `Jenkins`,
+      `Notion`,
+      `Visual Studio / VS Code`,
+    ],
   },
   {
     section: `Languages`,
     items: [
-      `CSS3`,
+      `CSS3 / LESS / SASS`,
       `HTML5`,
-      `JavaScript`,
-      `LESS`,
-      `SASS`,
+      `JavaScript / JSON`,
+      `Ruby on Rails`,
       `SQL`,
       `SVG`,
-      `TypeScript`
-    ]
+      `Typescript`,
+    ],
   },
   {
-    section: `JS Frameworks`,
-    items: [`Angular`, `Cordova`, `Ionic`, `React`, `Vue`]
+    section: `Frameworks`,
+    items: [
+      `Angular / AngularJS`,
+      `Angular Material`,
+      `Ionic`,
+      `MUI (Material UI for React)`,
+      `React`,
+    ],
   },
   {
-    section: `CSS Frameworks`,
-    items: [`Angular Material`, `Bootstrap`, `Foundation`, `Semantic UI`]
-  },
-  {
-    section: `Charting`,
-    items: [`ApexCharts`, `Chart.js`, `D3/NVD3`, `Google Charts`]
-  },
-  {
-    section: `Building`,
-    items: [`Browserify`, `Fastlane`, `Gulp`, `Webpack`]
-  },
-  {
-    section: `Utilities`,
-    items: [`Lodash`, `Moment.js`, `RxJS`]
-  },
-  {
-    section: `Package Managers`,
-    items: [`npm`, `Yarn`]
+    section: `Tools`,
+    items: [
+      `Chart.js`,
+      `D3 / NVD3`,
+      `Google Charts`,
+      `Jest`,
+      `Moment.js / Day.js`,
+      `NPM / Yarn`,
+      `Rspec`,
+      `RxJS`,
+    ],
   },
   {
     section: `Soft Skills`,
     items: [
       `Attention to detail`,
-      `Communication`,
       `Creativity`,
-      `Critical thinking`,
+      `Curiosity`,
       `Dedication`,
-      `Flexibility`,
+      `Empathy`,
       `Organization`,
       `Problem-solving`,
-      `Teamwork`
-    ]
-  }
+      `Working smarter`,
+    ],
+  },
 ];
