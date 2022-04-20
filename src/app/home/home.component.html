@@ -1,27 +1,30 @@
-<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="32px">
-  <h1
-    [class.mat-display-3]="screen.isXsOrSm"
-    [class.mat-display-4]="!screen.isXsOrSm"
-  >
-    Hello, I'm&nbsp;<strong>Kailin</strong>.
+<div fxLayout="column"
+     fxLayoutAlign="center center"
+     fxLayoutGap="16px">
+  <h1 [class.mat-display-3]="screen.isXsOrSm"
+      [class.mat-display-4]="!screen.isXsOrSm">
+    <div fxLayout="row"
+         fxLayoutAlign="center center">
+      <div>Hello, I'm </div>
+      <app-signature></app-signature>
+    </div>
   </h1>
-  <h3
-    class="subtitle"
-    [class.mat-display-2]="!screen.isXsOrSm"
-    [class.mat-headline]="screen.isXsOrSm"
-  >
+  <h3 class="subtitle"
+      [class.mat-display-2]="!screen.isXsOrSm"
+      [class.mat-headline]="screen.isXsOrSm">
     A senior front-end developer & designer based in Chicago.
   </h3>
-  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="16px">
-    <button color="accent" mat-flat-button [routerLink]="['/resume']">
+  <div fxLayout="row"
+       fxLayoutAlign="center center"
+       fxLayoutGap="16px">
+    <button color="accent"
+            mat-flat-button
+            [routerLink]="['/resume']">
       Resume
     </button>
-    <a
-      color="primary"
-      href="https://github.com/kailinj"
-      mat-flat-button
-      target="_blank"
-      >GitHub</a
-    >
+    <a color="primary"
+       href="https://github.com/kailinj"
+       mat-flat-button
+       target="_blank">GitHub</a>
   </div>
 </div>
