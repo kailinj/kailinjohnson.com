@@ -1,0 +1,15 @@
+@keyframes write {
+  from {
+    stroke-dashoffset: 550;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#kailin-signature path {
+  animation: write 1.25s linear forwards;
+  stroke-dasharray: 550;
+  stroke-dashoffset: 550;
+}
