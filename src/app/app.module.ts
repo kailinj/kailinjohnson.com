@@ -21,9 +21,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeModule } from './resume/resume.module';
 import { SignatureComponent } from './signature/signature.component';
+import { HelloComponent } from './hello/hello.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SignatureComponent],
+  declarations: [AppComponent, HomeComponent, SignatureComponent, HelloComponent],
   imports: [
     CommonModule,
     MatButtonModule,
