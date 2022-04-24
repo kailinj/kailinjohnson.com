@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { isString } from 'util';
 
 @Component({
   selector: "app-history",
@@ -19,6 +18,6 @@ export class HistoryComponent implements OnInit {
   }
 
   hasSections(details: any[]) {
-    return details && details.length && !isString(details[0]);
+    return details && details.length && !((typeof details[0] === 'string') || (details[0] instanceof String));
   }
 }
