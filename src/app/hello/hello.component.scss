@@ -1,6 +1,6 @@
 @keyframes write {
   from {
-    stroke-dashoffset: 480;
+    stroke-dashoffset: 500;
   }
 
   to {
@@ -9,18 +9,19 @@
 }
 
 #hello path {
-  animation: write 1s linear forwards;
-  stroke-dasharray: 480;
-  stroke-dashoffset: 480;
-  @for $i from 1 through 9 {
+  animation: write 0.85s linear forwards;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  @for $i from 1 through 17 {
     &:nth-child(#{$i}) {
-      @if $i == 4 {
-        animation-delay: $i * 440ms;
-      } @else if $i > 7 {
-        animation-delay: $i * 540ms;
-      } @else {
-        animation-delay: $i * 500ms;
-      }
+      animation-delay: $i * 325ms;
+      // @if $i == 4 {
+        
+      // } @else if $i > 7 {
+      //   animation-delay: $i * 430ms;
+      // } @else {
+      //   animation-delay: $i * 390ms;
+      // }
     }
   }
 }

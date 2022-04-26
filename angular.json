@@ -1,8 +1,5 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "76c3db04-5608-42d1-9197-bf3b6bc10022"
-  },
   "defaultProject": "demo",
   "newProjectRoot": "projects",
   "projects": {
@@ -13,18 +10,6 @@
           "configurations": {
             "production": {
               "aot": true,
-              "budgets": [
-                {
-                  "maximumError": "5mb",
-                  "maximumWarning": "2mb",
-                  "type": "initial"
-                },
-                {
-                  "maximumError": "10kb",
-                  "maximumWarning": "6kb",
-                  "type": "anyComponentStyle"
-                }
-              ],
               "buildOptimizer": true,
               "extractLicenses": true,
               "fileReplacements": [
@@ -41,20 +26,18 @@
             }
           },
           "options": {
-            "aot": true,
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "index": "src/index.html",
             "main": "src/main.ts",
-            "outputPath": "dist",
+            "outputPath": "dist/demo",
             "polyfills": "src/polyfills.ts",
             "scripts": [],
             "styles": [
               "src/styles.scss"
             ],
-            "tsConfig": "tsconfig.app.json"
+            "tsConfig": "src/tsconfig.app.json"
           }
         },
         "extract-i18n": {
@@ -70,8 +53,8 @@
               "**/node_modules/**"
             ],
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json"
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
             ]
           }
         },
