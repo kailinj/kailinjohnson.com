@@ -27,15 +27,12 @@
       </section>
     </mat-sidenav>
     <mat-sidenav-content class="resume-content">
-      <ng-scrollbar
+      <div
+        class="scroll-content"
         fxLayout="column"
         fxLayoutAlign="start stretch"
         fxLayoutGap="16px"
       >
-        <!-- <div class="scroll-content"
-             fxLayout="column"
-             fxLayoutAlign="start stretch"
-             fxLayoutGap="16px"> -->
         <section>
           <h2 class="mat-headline">Overview</h2>
           <mat-card>
@@ -51,8 +48,7 @@
         <section *ngIf="screenIsXsOrSm">
           <app-skills></app-skills>
         </section>
-        <!-- </div> -->
-      </ng-scrollbar>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
