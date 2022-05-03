@@ -1,18 +1,5 @@
 export const skills: any[] = [
   {
-    section: `Software`,
-    items: [
-      `Adobe Illustrator`,
-      `Coda`,
-      `ClickUp`,
-      `Figma`,
-      `GitHub`,
-      `Jenkins`,
-      `Notion`,
-      `Visual Studio / VS Code`,
-    ],
-  },
-  {
     section: `Languages`,
     items: [
       `CSS3 / LESS / SASS`,
@@ -45,6 +32,19 @@ export const skills: any[] = [
       `NPM / Yarn`,
       `Rspec`,
       `RxJS`,
+    ],
+  },
+  {
+    section: `Software`,
+    items: [
+      `Adobe Illustrator`,
+      `Coda`,
+      `ClickUp`,
+      `Figma`,
+      `GitHub`,
+      `Jenkins`,
+      `Notion`,
+      `Visual Studio / VS Code`,
     ],
   },
   {
