@@ -2,13 +2,10 @@
   <mat-toolbar class="mat-elevation-z2 resume-toolbar">
     <mat-toolbar-row>
       <div fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
-        <button mat-icon-button (click)="goBack()">
-          <mat-icon svgIcon="back"></mat-icon>
-        </button>
         <img class="avatar" src="assets/img/me.png" />
         <span
           fxFlex
-          [class]="media.isActive('xs') ? 'mat-title' : 'mat-display-1'"
+          [class]="media.isActive('xs') ? 'mat-headline' : 'mat-display-1'"
           >Kailin Johnson</span
         >
       </div>

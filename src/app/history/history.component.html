@@ -1,35 +1,42 @@
-<h2 class="mat-headline">{{title}}</h2>
-<div fxLayout="column"
-     fxLayoutAlign="start stretch"
-     fxLayoutGap="12px">
-  <mat-card fxLayout="column"
-            *ngFor="let item of history">
+<h2 class="mat-headline">{{ title }}</h2>
+<div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="12px">
+  <mat-card fxLayout="column" *ngFor="let item of history">
     <mat-card-header [class.m-card-header-bordered]="item.details?.length">
-      <img class="m-card-avatar-lg"
-           matCardAvatar
-           [src]="item.location?.logo | imageUrl:'history'"
-           (click)="goTo(item.url)" />
-      <mat-card-title>{{ item.title }}</mat-card-title>
+      <img
+        class="m-card-avatar-lg"
+        matCardAvatar
+        *ngIf="!screen.isXs"
+        [src]="item.location?.logo | imageUrl: 'history'"
+        (click)="goTo(item.url)"
+      />
+      <mat-card-title>
+        <div class="mat-title">{{ item.title }}</div>
+      </mat-card-title>
       <mat-card-subtitle>
         <div>{{ item.location?.name }}</div>
-        <div class="mat-caption">{{ item.dates[0] }} &ndash; {{ item.dates[1] }}</div>
+        <div class="mat-caption">
+          {{ item.dates[0] }} &ndash; {{ item.dates[1] }}
+        </div>
       </mat-card-subtitle>
     </mat-card-header>
+    <img
+      alt="Photo of a Shiba Inu"
+      mat-card-image
+      [src]="item.location?.logo | imageUrl: 'history'"
+      *ngIf="screen.isXs"
+    />
     <mat-card-content *ngIf="item.details?.length">
       <div [ngSwitch]="hasSections(item.details)">
         <div *ngSwitchCase="true">
-          <ng-template let-detail
-                       ngFor
-                       [ngForOf]="item.details">
-            <h5 class="mat-body-2">{{detail.title}}</h5>
+          <ng-template ngFor let-detail [ngForOf]="item.details">
+            <h5 class="mat-body-2">{{ detail.title }}</h5>
             <ul class="mat-body-1">
-              <li *ngFor="let item of detail.items">{{item}}</li>
+              <li *ngFor="let item of detail.items">{{ item }}</li>
             </ul>
           </ng-template>
         </div>
-        <ul class="mat-body-1"
-            *ngSwitchCase="false">
-          <li *ngFor="let detail of item.details">{{detail}}</li>
+        <ul class="mat-body-1" *ngSwitchCase="false">
+          <li *ngFor="let detail of item.details">{{ detail }}</li>
         </ul>
       </div>
     </mat-card-content>

@@ -61,9 +61,10 @@ body {
   }
 }
 
+$avatarSize: 64px;
 .mat-card-avatar.m-card-avatar-lg {
-  height: 64px;
-  width: 64px;
+  height: $avatarSize;
+  width: $avatarSize;
   &:hover {
     cursor: pointer;
   }
@@ -78,8 +79,10 @@ body {
 // Angular Material overrides
 
 // Offset mat-card-title margin bottom
-mat-card > mat-card-header:first-child:last-child .mat-card-subtitle {
-  margin-bottom: 0;
+mat-card > mat-card-header {
+  &:first-child:last-child .mat-card-subtitle {
+    margin-bottom: 0;
+  }
 }
 
 // Decrease padding in list within expansion-panel

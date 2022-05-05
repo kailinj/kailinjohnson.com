@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { ScreenService } from 'app/services/screen.service';
+
 @Component({
   selector: "app-history",
   templateUrl: "./history.component.html",
@@ -9,9 +11,9 @@ export class HistoryComponent implements OnInit {
   @Input() history: any[];
   @Input() title: string;
 
-  constructor() {}
+  constructor(public screen: ScreenService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   goTo(url: string) {
     window.open(url, "_blank");
