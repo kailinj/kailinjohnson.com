@@ -3,7 +3,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 
-import { routeTransitionAnimations } from './route-transition-animations';
+import { routeTransitionAnimations } from './app-animations';
 
 @Component({
   selector: "app-root",

@@ -10,8 +10,13 @@
   }
 }
 
-.subtitle {
+.intro {
+  max-height: 170px;
+}
+
+.description {
   width: 80%;
+  font-weight: 300;
 }
 
 [mat-flat-button] {
@@ -24,8 +29,15 @@
   }
 }
 
-@media screen and (max-width: 399px) {
-  .subtitle {
+@media screen and (max-width: 500px) {
+  .description {
     width: 90%;
+  }
+  .intro {
+    max-height: unset;
+  }
+  [mat-flat-button] {
+    font-size: 18px;
+    padding: 0.75rem 1rem;
   }
 }

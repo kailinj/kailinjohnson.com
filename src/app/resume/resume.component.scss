@@ -18,7 +18,6 @@ mat-sidenav-content {
     $totalHeight: calc(100vh - #{$offset});
     height: $totalHeight;
     min-height: $totalHeight;
-    // transition: height 500ms ease-in-out;
   }
 }
 
@@ -37,12 +36,7 @@ mat-toolbar {
 }
 
 .resume-toolbar {
-  // transition: margin 500ms ease-in-out;
   font-size: 13px;
-
-  // &.hidden {
-  //   margin-top: -64px;
-  // }
 
   .avatar {
     width: 48px;
@@ -57,7 +51,6 @@ mat-toolbar {
 
 .resume-content {
   .mat-headline {
-    color: #222;
     margin-bottom: 12px;
     line-height: 40px;
   }
@@ -69,7 +62,6 @@ mat-toolbar {
 }
 
 .skills-sidenav {
-  background-color: #00000042;
   width: 275px;
 }
 

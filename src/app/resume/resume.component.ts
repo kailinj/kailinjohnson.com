@@ -4,7 +4,8 @@ import { MediaObserver } from '@angular/flex-layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
-import { animationConfig, education, experience, overview } from './resume.constants';
+import { slideDownFadeIn } from 'app/app-animations';
+import { education, experience, overview } from './resume.constants';
 
 @Component({
   selector: "app-resume",
@@ -14,26 +15,26 @@ import { animationConfig, education, experience, overview } from './resume.const
     trigger("pageAnimations", [
       transition(":enter", [
         query(".mat-toolbar", [
-          style(animationConfig.out),
+          style(slideDownFadeIn.out),
           animate(
-            `500ms ${animationConfig.easing}`,
-            style(animationConfig.in)
+            `500ms ${slideDownFadeIn.easing}`,
+            style(slideDownFadeIn.in)
           )
         ]),
         query(".mat-sidenav-container", [
-          style(animationConfig.out),
+          style(slideDownFadeIn.out),
           animate(
-            animationConfig.easing,
-            style(animationConfig.in)
+            slideDownFadeIn.easing,
+            style(slideDownFadeIn.in)
           )
         ])
       ]),
       transition(":leave", [
         query(".mat-toolbar, .mat-sidenav-container", [
-          style(animationConfig.in),
+          style(slideDownFadeIn.in),
           animate(
-            animationConfig.easing,
-            style(animationConfig.out)
+            slideDownFadeIn.easing,
+            style(slideDownFadeIn.out)
           )
         ])
       ])
@@ -59,7 +60,7 @@ export class ResumeComponent implements OnInit {
   public showSidenav: boolean = false;
   public showToolbar: boolean = false;
 
-  constructor(private router: Router, public media: MediaObserver) {}
+  constructor(private router: Router, public media: MediaObserver) { }
 
   ngOnInit() {
     setTimeout(() => {

@@ -1,5 +1,13 @@
 import { animate, animateChild, group, query, style, transition, trigger } from '@angular/animations';
 
+export const animationEasing = `cubic-bezier(0.35, 0, 0.25, 1)`;
+
+export const slideDownFadeIn = {
+  easing: `500ms ${animationEasing}`,
+  in: { opacity: 1, transform: "none" },
+  out: { opacity: 0, transform: "translateY(-65px)" },
+};
+
 const isOptional = { optional: true };
 const opaqueStyle = style({ opacity: 1 });
 const overlapStyle = style({

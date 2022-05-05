@@ -1,9 +1,3 @@
-export const animationConfig = {
-  easing: "500ms cubic-bezier(0.35, 0, 0.25, 1)",
-  in: { opacity: 1, transform: "none" },
-  out: { opacity: 0, transform: "translateY(-65px)" },
-};
-
 export const education: any[] = [
   {
     dates: [`Aug 2007`, `Dec 2011`],

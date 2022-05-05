@@ -1,31 +1,42 @@
-<div fxLayout="column"
-     fxLayoutAlign="center center"
-     fxLayoutGap="16px">
-  <h1 [class.mat-display-3]="screen.isXsOrSm"
-      [class.mat-display-4]="!screen.isXsOrSm">
-    <div fxLayout="row"
-         fxLayoutAlign="center center"
-         fxLayoutGap="24px">
-      <app-hello></app-hello>
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px">
+  <h1
+    [class.mat-display-2]="screen.isXs"
+    [class.mat-display-3]="screen.isSm"
+    [class.mat-display-4]="!screen.isXsOrSm"
+    class="intro"
+  >
+    <div
+      [fxLayout]="screen.isXs ? 'column' : 'row'"
+      fxLayoutAlign="center center"
+      fxLayoutWrap
+    >
+      <div class="hello-im" fxLayout="row">
+        <div *ngFor="let letter of text.hello" [class]="letter">
+          {{ letter }}
+        </div>
+        <div class="space">&nbsp;</div>
+        <div *ngFor="let letter of text.im" [class]="letter">{{ letter }}</div>
+        <div *ngIf="!screen.isXs" class="space">&nbsp;</div>
+      </div>
       <app-signature></app-signature>
     </div>
   </h1>
-  <h3 class="subtitle"
-      [class.mat-display-2]="!screen.isXsOrSm"
-      [class.mat-headline]="screen.isXsOrSm">
-    A senior front-end developer & designer based in Chicago.
+  <h3
+    class="description"
+    [class.mat-display-2]="!screen.isXsOrSm"
+    [class.mat-display-1]="screen.isSm"
+    [class.mat-headline]="screen.isXs"
+  >
+    A senior developer & designer based in Chicago.
   </h3>
-  <div fxLayout="row"
-       fxLayoutAlign="center center"
-       fxLayoutGap="16px">
-    <button color="accent"
-            mat-flat-button
-            [routerLink]="['/resume']">
-      Resume
+  <div
+    class="buttons"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    fxLayoutGap="16px"
+  >
+    <button color="primary" mat-flat-button [routerLink]="['/resume']">
+      Learn more
     </button>
-    <a color="primary"
-       href="https://github.com/kailinj"
-       mat-flat-button
-       target="_blank">GitHub</a>
   </div>
 </div>
