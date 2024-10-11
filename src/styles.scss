@@ -9,9 +9,12 @@ $kj-warn: mat.define-palette(mat.$red-palette);
 
 $kj-typography: mat.define-typography-config(
   $font-family: "Chivo, Roboto, monospace",
+  $body-1: mat.define-typography-level(14px, 20px, 300),
+  $title: mat.define-typography-level(20px, 32px, 600),
+  $subheading-2: mat.define-typography-level(18px, 28px, 400),
 );
 
-$kj-theme: mat.define-dark-theme(
+$kj-theme: mat.define-light-theme(
   (
     color: (
       primary: $kj-primary,
@@ -37,10 +40,25 @@ body {
 
 body {
   margin: 0;
-  background-image: url("./assets/img/rainbow-vortex.svg");
+  background-image: url("./assets/img/cool-background.png");
   background-size: cover;
-  overflow: hidden;
   background-repeat: no-repeat;
+  overflow: hidden;
+  // background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  // background-size: "400% 400%";
+  // animation: "gradient 25s ease infinite";
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 // Custom Angular Material variations
@@ -49,11 +67,13 @@ body {
   font-size: 14px;
 }
 
-.mat-card,
 .mat-expansion-panel,
 .mat-drawer {
-  background: rgb(0 0 0 / 35%);
-  color: rgb(255 255 255 / 90%);
+  background: rgb(255 255 255 / 35%);
+}
+
+.mat-card {
+  background: rgb(255 255 255 / 65%);
   .mat-body-1,
   .mat-body-1 li {
     font-size: 16px;

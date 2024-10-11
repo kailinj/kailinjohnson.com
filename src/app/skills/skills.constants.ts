@@ -13,13 +13,7 @@ export const skills: any[] = [
   },
   {
     section: `Frameworks`,
-    items: [
-      `Angular / AngularJS`,
-      `Angular Material`,
-      `Ionic`,
-      `MUI (Material UI for React)`,
-      `React`,
-    ],
+    items: [`Angular`, `Angular Material`, `Ionic`, `MUI`, `React`],
   },
   {
     section: `Tools`,
@@ -44,7 +38,7 @@ export const skills: any[] = [
       `GitHub`,
       `Jenkins`,
       `Notion`,
-      `Visual Studio / VS Code`,
+      `Visual Studio Code`,
     ],
   },
   {

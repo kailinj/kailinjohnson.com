@@ -23,18 +23,38 @@ export const education: any[] = [
 
 export const experience: any[] = [
   {
+    dates: [`May 2022`, `Sep 2024`],
+    details: [
+      `Developed and integrated innovative features using modern technologies such as React, MUI, React Query, GraphQL, and Ruby on Rails, contributing to a seamless user experience.`,
+      `Spearheaded the redesign of our front-end architecture, ensuring consistency and maintainability.`,
+      `Defined and enforced best practices for front-end development, including code quality, performance optimization, and accessibility guidelines, fostering a culture of excellence within the team.`,
+      `Collaborated with stakeholders to transform business requirements into actionable, clearly defined technical tasks, ensuring alignment between project goals and development efforts.`,
+      `Facilitated agile ceremonies, including Sprint Reviews and Retrospectives, to enhance team collaboration, drive continuous improvement, and foster a culture of mutual respect.`,
+      `Engaged with cross-functional teams to identify challenges and devise effective solutions, promoting a collaborative environment that encourages creative thinking.`,
+      `Refactored bottlenecks and introduced new tooling to ensure applications met user expectations for speed and responsiveness.`,
+      `Created, organized, and automated comprehensive documentation for team processes, code standards, meeting notes, and more, enhancing team efficiency and onboarding for new members.`,
+      `Provided mentorship and guidance to junior developers and interns, fostering their growth and ensuring knowledge transfer within the team.`,
+      `Organized and facilitated monthly team-building social events for an international team of employees, improving team cohesion and morale through creative virtual activities.`,
+    ],
+    location: {
+      city: `Chicago, IL`,
+      logo: `ftn`,
+      name: `Five to Nine`,
+    },
+    title: `Lead Front-End Software Engineer`,
+    url: `https://fivetonine.co/`,
+  },
+  {
     dates: [`Jun 2020`, `Apr 2022`],
     details: [
-      `Developed new features using React and Ruby on Rails`,
-      `Converted views from Rails HAML files to React components`,
-      `Implemented Action Center, a flexible notification / suggestion feature that encouraged moms to take certain actions within the platform`,
-      `Translated revamped homepage designs to code, utilizing advanced CSS grids and animations`,
-      `Acted as technical lead on the implementation of Diverse Talent Clouds, an internal and client-facing UI that utilized our existing “Match” engine to curate pre-vetted & available top talent, emphasizing gender & ethnic diversity and in-demand skill sets spanning multiple industries`,
-      `Contributed to the integration of Nylas into the platform, allowing clients (employers) to connect their Google/Microsoft/Yahoo calendar to the platform, which was then used to determine (in real-time) which time slots they’d actually be available to interview a job applicant`,
-      `Created shared components to decrease code duplication, simplify logic, and ensure UI/UX consistency`,
-      `Built feature tests using Rspec and Jest`,
-      `Acted as Product/Engineering/Design team knowledge base owner by establishing a logical, clearly organized hierarchy, adding consistently named & formatted pages, consolidating information from GitHub wiki, Nuclino, and Google Drive into a single source of truth in Notion, then enhancing it via connected databases, interactive features, and reusable templates for onboarding, meeting notes, technical design docs, and more`,
-      `Mentored several junior developers`,
+      `Led the conversion of Rails HAML views to React components, modernizing the front end.`,
+      `Implemented the Action Center, a dynamic notification feature that encouraged user engagement.`,
+      `Acted as technical lead for the Diverse Talent Clouds initiative, promoting diversity in talent matching and empowering users to organize and view talent in a myriad of ways.`,
+      `Integrated 3rd-party calendar functionality via Nylas, enhancing client ease-of-use and improving interview scheduling efficiency.`,
+      `Developed shared components to minimize code duplication and ensure UI/UX consistency.`,
+      `Consolidated and organized project knowledge into a single source of truth in Notion, enhancing documentation clarity and increasing consistency and efficiency via templates.`,
+      `Mentored junior developers, both on technical skills and general career guidance.`,
+      `Founded the Culture Committee; researched how to foster a healthy and inclusive team culture while working remote & growing quickly.`,
     ],
     location: {
       city: `Chicago, IL`,
@@ -47,29 +67,30 @@ export const experience: any[] = [
   {
     dates: [`Jun 2016`, `Jan 2020`],
     details: [
-      `Rewrote AngularJS features in Angular (2+)`,
-      `Implemented a front-end framework (Angular Material) to increase consistency of UI/UX & decrease custom CSS`,
-      `Developed new features & refactored existing logic using modular design and reusable components`,
-      `Built a cross-platform mobile app using Ionic`,
-      `Improved overall app performance by optimizing assets, implementing lazy loading, and utilizing RxJS and the Angular async pipe to mitigate the risk of memory leaks`,
-      `Established, documented, and communicated guidelines around code formatting, file organization, and file/module/function/variable naming to increase readability & ensure consistency`,
-      `Acted as scrum master — translated user stories into clearly defined tasks, utilized planning poker for effort estimation, managed & groomed the backlog, and led daily standups`,
-      `Collaborated w/ other developers, designers, testers, PMs, customer service reps, and salespeople for customer feedback, requirements gathering, testing, and issue identification/tracking`,
-      `Managed team communication channels: configured teams/projects/tasks in Asana & channels/teams/apps in Slack, organized files in Google Drive & Dropbox`,
+      `Rewrote outdated AngularJS features in Angular (2+) to modernize the application and enhance performance.`,
+      `Implemented a front-end framework (Angular Material) to ensure consistent UI/UX and reduce custom CSS, speeding up the design process.`,
+      `Utilized modular design to develop new features, refactor existing logic, and create reusable components to improve maintainability and scalability.`,
+      `Built a cross-platform mobile app using Ionic to expand user reach and provide a seamless experience across devices.`,
+      `Optimized app performance through asset management, lazy loading, and RxJS to prevent memory leaks and enhance responsiveness.`,
+      `Established and documented coding guidelines to increase readability and maintain consistency across the codebase.`,
+      `Acted as Scrum Master, translating user stories into tasks, estimating effort, managing the backlog, and leading daily standups to improve team collaboration and project delivery.`,
+      `Collaborated with developers, designers, testers, and PMs to gather feedback, refine requirements, and ensure the product continued to meet user needs.`,
+      `Managed team communication across services to enhance efficiency and streamline collaboration.`,
     ],
     location: {
       city: `Chicago, IL`,
       logo: `nexttier`,
       name: `NextTier Education / Follett Corporation`,
     },
-    title: `Lead Front-End Developer`,
+    title: `Lead Front-End Software Engineer`,
     url: `https://www.nexttier.com/`,
   },
   {
     dates: [`Jun 2012`, `Jun 2016`],
     details: [
-      `Worked with companies across multiple industries (Healthcare, Insurance, Energy & Utilities, Mergers & Acquisitions, Banking) on projects involving full-stack web development, UI design, mobile optimization, platform customization, UX strategy, code maintenance, requirements gathering, and more`,
-      `Focused primarily on front-end design and development, utilizing AngularJS, Bootstrap, and Angular Material, but also worked in .NET, SQL, and other tools in the Microsoft data & development suites`,
+      `Collaborated with diverse companies across industries such as healthcare, insurance, energy, mergers & acquisitions, and banking on projects involving full-stack web development, UI design, mobile optimization, platform customization, UX strategy, and code maintenance.`,
+      `Employed agile methodologies and the Scrum framework to effectively organize and manage project workflows.`,
+      `Specialized in front-end design and development using AngularJS, Bootstrap, and Angular Material, while also engaging with .NET, SQL, and various tools in the Microsoft data and development suites.`,
     ],
     location: {
       city: `Chicago, IL`,
@@ -81,4 +102,4 @@ export const experience: any[] = [
   },
 ];
 
-export const overview: string = `I am a dedicated and user-focused front-end web developer with 10+ years of experience building all aspects of the UX and UI for web and mobile apps. I’m passionate about creating engaging, intuitive experiences via consistent, delightful design, all built using clean, well-organized, and reusable code.`;
+export const overview: string = `I am a dedicated and user-focused front-end developer with 13+ years of experience building all aspects of the UX and UI for web and mobile apps. I'm passionate about creating engaging, intuitive experiences with consistent, delightful design, all built using clean, well-organized, and reusable code.`;

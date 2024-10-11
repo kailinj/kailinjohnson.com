@@ -1,14 +1,14 @@
-$datesWidth: 70px;
+$datesWidth: 36px;
 
 .mat-title,
 .mat-subheading-1 {
-  line-height: 1.2em;
+  line-height: 1.5;
   margin: 0;
 }
 
 .mat-body-2 {
   margin: 16px 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .history-dates {
@@ -20,6 +20,28 @@ $datesWidth: 70px;
   margin-left: $datesWidth;
 }
 
+.mat-card-header {
+  align-items: center;
+  .mat-card-title {
+    margin-bottom: 0;
+  }
+}
+
+.mat-card-avatar {
+  width: 48px;
+  height: 48px;
+}
+
 .mat-card-header-text {
   order: 2;
+}
+
+mat-card-subtitle.mat-card-subtitle,
+.mat-subheading-2 {
+  margin-bottom: 0;
+  margin-top: 0 !important;
+}
+
+.dates {
+  font-weight: 200;
 }

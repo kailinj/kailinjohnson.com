@@ -10,15 +10,7 @@
       fxLayoutAlign="center center"
       fxLayoutWrap
     >
-      <div class="hello-im" fxLayout="row">
-        <div *ngFor="let letter of text.hello" [class]="letter">
-          {{ letter }}
-        </div>
-        <div class="space">&nbsp;</div>
-        <div *ngFor="let letter of text.im" [class]="letter">{{ letter }}</div>
-        <div *ngIf="!screen.isXs" class="space">&nbsp;</div>
-      </div>
-      <app-signature></app-signature>
+      <div class="hello-im">Hello! I'm Kailin.</div>
     </div>
   </h1>
   <h3
