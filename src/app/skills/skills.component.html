@@ -14,7 +14,9 @@
     [(expanded)]="skill.isExpanded"
     *ngFor="let skill of skills; let index"
   >
-    <mat-expansion-panel-header>{{ skill.section }}</mat-expansion-panel-header>
+    <mat-expansion-panel-header class="mat-body-2">{{
+      skill.section
+    }}</mat-expansion-panel-header>
     <mat-list dense>
       <mat-list-item
         *ngFor="let item of skill.items"
@@ -28,11 +30,11 @@
       >
         <img
           matListAvatar
-          [src]="item | snakeCase | imageUrl: 'skills'"
-          [matTooltip]="minViewActive ? item : null"
+          [src]="item.name | snakeCase | imageUrl : 'skills'"
+          [matTooltip]="minViewActive ? item.name : null"
         />
         <p matLine>
-          {{ item }}
+          {{ item.name }}
         </p>
       </mat-list-item>
     </mat-list>

@@ -12,6 +12,9 @@
         *ngIf="!screen.isXs"
         [src]="item.location?.logo | imageUrl : 'history'"
         (click)="goTo(item.url)"
+        style="cursor: pointer"
+        [alt]="item.location?.name"
+        [name]="item.location?.name"
       />
       <mat-card-title>
         <div class="mat-title">{{ item.title }}</div>

@@ -15,7 +15,7 @@ mat-sidenav-content {
   mat-sidenav-container,
   mat-sidenav-content,
   .scroll-content {
-    $totalHeight: calc(100vh - #{$offset});
+    $totalHeight: 100vh;
     height: $totalHeight;
     min-height: $totalHeight;
   }
@@ -36,18 +36,8 @@ mat-toolbar {
   z-index: 10;
 }
 
-.resume-toolbar {
-  font-size: 13px;
-
-  .avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-
-    + span {
-      margin: 0;
-    }
-  }
+.round {
+  border-radius: 50%;
 }
 
 .resume-content {

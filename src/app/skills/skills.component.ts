@@ -1,9 +1,9 @@
-import { state, style, trigger } from '@angular/animations';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MediaObserver } from '@angular/flex-layout';
-import { MatAccordion } from '@angular/material/expansion';
+import { state, style, trigger } from "@angular/animations";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { MediaObserver } from "@angular/flex-layout";
+import { MatAccordion } from "@angular/material/expansion";
 
-import { skills } from './skills.constants';
+import { mySkills } from "./skills.constants";
 
 @Component({
   selector: "app-skills",
@@ -13,15 +13,22 @@ import { skills } from './skills.constants';
     trigger(`activeViewToggled`, [
       state(`detailed`, style({ width: "100%", "margin-top": "0" })),
       state(`detailed-sm`, style({ width: "auto", "margin-top": "0" })),
-      state(`minimal`, style({ width: "40px", "margin-top": "-5px" }))
-    ])
-  ]
+      state(`minimal`, style({ width: "40px", "margin-top": "-5px" })),
+    ]),
+  ],
 })
 export class SkillsComponent implements OnInit {
   @ViewChild("skillAccordion", { static: true }) skillAccordion: MatAccordion;
 
   public minViewActive: boolean = false;
-  public skills: any[] = skills;
+  public skillCategories: Set<string> = new Set(
+    mySkills.map((s) => s.category)
+  );
+  public skills: any[] = Array.from(this.skillCategories).map((c) => ({
+    section: c,
+    isExpanded: true,
+    items: mySkills.filter((s) => s.category === c),
+  }));
 
   get allCollapsed() {
     return !this.expandedStatuses.has(true);
@@ -32,7 +39,7 @@ export class SkillsComponent implements OnInit {
   }
 
   get expandedStatuses() {
-    return new Set([...this.skills].map(s => s.isExpanded));
+    return new Set([...this.skills].map((s) => s.isExpanded));
   }
 
   get screenIsXsOrSm() {
@@ -42,7 +49,7 @@ export class SkillsComponent implements OnInit {
   constructor(public media: MediaObserver) {}
 
   ngOnInit() {
-    this.skills.forEach(s => (s.isExpanded = true));
+    this.skills.forEach((s) => (s.isExpanded = true));
   }
 
   public toggleAccordion() {

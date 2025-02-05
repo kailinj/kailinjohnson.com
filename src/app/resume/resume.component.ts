@@ -1,11 +1,17 @@
-import { animate, query, style, transition, trigger } from '@angular/animations';
-import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
-import { MediaObserver } from '@angular/flex-layout';
-import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
+import {
+  animate,
+  query,
+  style,
+  transition,
+  trigger,
+} from "@angular/animations";
+import { Component, HostBinding, OnInit, ViewChild } from "@angular/core";
+import { MediaObserver } from "@angular/flex-layout";
+import { MatSidenav } from "@angular/material/sidenav";
+import { Router } from "@angular/router";
 
-import { slideDownFadeIn } from 'app/app-animations';
-import { education, experience, overview } from './resume.constants';
+import { slideDownFadeIn } from "app/app-animations";
+import { education, experience, overview } from "./resume.constants";
 
 @Component({
   selector: "app-resume",
@@ -14,32 +20,23 @@ import { education, experience, overview } from './resume.constants';
   animations: [
     trigger("pageAnimations", [
       transition(":enter", [
-        query(".mat-toolbar", [
-          style(slideDownFadeIn.out),
-          animate(
-            `500ms ${slideDownFadeIn.easing}`,
-            style(slideDownFadeIn.in)
-          )
-        ]),
         query(".mat-sidenav-container", [
           style(slideDownFadeIn.out),
-          animate(
-            slideDownFadeIn.easing,
-            style(slideDownFadeIn.in)
-          )
-        ])
+          animate(slideDownFadeIn.easing, style(slideDownFadeIn.in)),
+        ]),
+        query(".resume-content", [
+          style(slideDownFadeIn.out),
+          animate(`${slideDownFadeIn.easing}`, style(slideDownFadeIn.in)),
+        ]),
       ]),
       transition(":leave", [
         query(".mat-toolbar, .mat-sidenav-container", [
           style(slideDownFadeIn.in),
-          animate(
-            slideDownFadeIn.easing,
-            style(slideDownFadeIn.out)
-          )
-        ])
-      ])
-    ])
-  ]
+          animate(slideDownFadeIn.easing, style(slideDownFadeIn.out)),
+        ]),
+      ]),
+    ]),
+  ],
 })
 export class ResumeComponent implements OnInit {
   @HostBinding("@pageAnimations")
@@ -60,7 +57,7 @@ export class ResumeComponent implements OnInit {
   public showSidenav: boolean = false;
   public showToolbar: boolean = false;
 
-  constructor(private router: Router, public media: MediaObserver) { }
+  constructor(private router: Router, public media: MediaObserver) {}
 
   ngOnInit() {
     setTimeout(() => {

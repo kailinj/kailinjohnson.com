@@ -6,9 +6,13 @@
   }
 }
 
-.skill-logo {
+mat-expansion-panel {
+  background-color: white;
+}
+
+.mat-list-avatar {
   height: 30px;
-  border-radius: 50%;
+  border-radius: 0 !important;
 }
 
 mat-list[dense] {
@@ -20,6 +24,7 @@ mat-list[dense] {
     overflow: hidden;
     display: inline-flex;
     transition: all 500ms ease-in-out;
+    font-size: 14px;
   }
 }
 

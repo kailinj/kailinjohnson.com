@@ -1,16 +1,4 @@
 <div fxFlexFill fxLayout="column" fxLayoutAlign="start stretch">
-  <mat-toolbar class="mat-elevation-z2 resume-toolbar mat-primary">
-    <mat-toolbar-row>
-      <div fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
-        <img class="avatar" src="assets/img/me.png" />
-        <span
-          fxFlex
-          [class]="media.isActive('xs') ? 'mat-headline' : 'mat-display-1'"
-          >Kailin Johnson</span
-        >
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
   <mat-sidenav-container>
     <mat-sidenav
       class="skills-sidenav"
@@ -31,10 +19,19 @@
         fxLayoutGap="16px"
       >
         <section>
-          <h2 class="mat-headline">Overview</h2>
-          <mat-card>
-            <p class="mat-body-1">{{ overview }}</p>
-          </mat-card>
+          <div fxLayout="row" fxLayoutGap="12px">
+            <img class="avatar round" src="assets/img/me.jpeg" height="150" />
+            <div fxLayout="column" fxLayoutGap="8px">
+              <div
+                [class]="
+                  media.isActive('xs') ? 'mat-headline' : 'mat-display-1'
+                "
+              >
+                Kailin Johnson
+              </div>
+              <div class="mat-subheading-2">{{ overview }}</div>
+            </div>
+          </div>
         </section>
         <section>
           <app-history title="Experience" [history]="experience"></app-history>
