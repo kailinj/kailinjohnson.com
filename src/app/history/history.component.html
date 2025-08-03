@@ -5,11 +5,13 @@
   fxLayoutGap="12px"
   width="100%"
 >
-  <mat-card fxLayout="column" *ngFor="let item of history">
+  <mat-card
+    fxLayout="column"
+    *ngFor="let item of history"
+  >
     <mat-card-header [class.m-card-header-bordered]="item.details?.length">
       <img
         matCardAvatar
-        *ngIf="!screen.isXs"
         [src]="item.location?.logo | imageUrl : 'history'"
         (click)="goTo(item.url)"
         style="cursor: pointer"
@@ -34,23 +36,24 @@
         </div>
       </mat-card-subtitle>
     </mat-card-header>
-    <img
-      alt="Logo"
-      mat-card-image
-      [src]="item.location?.logo | imageUrl : 'history'"
-      *ngIf="screen.isXs"
-    />
     <mat-card-content *ngIf="item.details?.length">
       <div [ngSwitch]="hasSections(item.details)">
         <div *ngSwitchCase="true">
-          <ng-template ngFor let-detail [ngForOf]="item.details">
+          <ng-template
+            ngFor
+            let-detail
+            [ngForOf]="item.details"
+          >
             <h5 class="mat-body-2">{{ detail.title }}</h5>
             <ul class="mat-body-1 history-details">
               <li *ngFor="let item of detail.items">{{ item }}</li>
             </ul>
           </ng-template>
         </div>
-        <ul class="mat-body-1 history-details" *ngSwitchCase="false">
+        <ul
+          class="mat-body-1 history-details"
+          *ngSwitchCase="false"
+        >
           <li *ngFor="let detail of item.details">{{ detail }}</li>
         </ul>
       </div>
