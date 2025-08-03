@@ -1,29 +1,29 @@
 export const education: any[] = [
   {
-    dates: [`Aug 2007`, `Dec 2011`],
+    dates: ['Aug 2007', 'Dec 2011'],
     location: {
-      city: `Champaign, IL`,
-      logo: `illinois`,
-      name: `University of Illinois At Urbana-Champaign`,
+      city: 'Champaign, IL',
+      logo: 'illinois',
+      name: 'University of Illinois At Urbana-Champaign',
     },
-    title: `BA: Information Systems & Information Technology`,
-    url: `https://illinois.edu/`,
+    title: 'BA: Information Systems & Information Technology',
+    url: 'https://illinois.edu/',
   },
   {
-    dates: [`Jan 2010`, `Jun 2010`],
+    dates: ['Jan 2010', 'Jun 2010'],
     location: {
-      city: `Vienna, Austria`,
-      logo: `wu`,
-      name: `Wirtschaftsuniversität Wien`,
+      city: 'Vienna, Austria',
+      logo: 'wu',
+      name: 'Wirtschaftsuniversität Wien',
     },
-    title: `Austria-Illinois Exchange Program`,
-    url: `https://www.wu.ac.at/en/`,
+    title: 'Austria-Illinois Exchange Program',
+    url: 'https://www.wu.ac.at/en/',
   },
 ];
 
 export const experience: any[] = [
   {
-    dates: [`May 2022`, `Sep 2024`],
+    dates: ['May 2022', 'Sep 2024'],
     details: `•  Transformed front-end development practices by redesigning architecture, enforcing best practices in development, and fostering a collaborative and agile environment through strong leadership, while leveraging client-side technologies such as React, Ruby on Rails, and GraphQL.
 
 •  Collaborated with cross-functional teams, including Head of Product, Product Designer, Quality Assurance Lead and Head of Customer Success to translate business needs into technical requirements to effectively deliver best-in-class user experiences under tight deadlines.
@@ -54,16 +54,16 @@ export const experience: any[] = [
 
 • Ensured compliance with WCAG, Section 508, and A11Y accessibility standards by integrating AudioEye, utilizing A11Y checklists, and employing Eslint plugins.`,
     location: {
-      city: `Chicago, IL`,
-      logo: `ftn`,
-      name: `Five to Nine`,
+      city: 'Chicago, IL',
+      logo: 'ftn',
+      name: 'Five to Nine',
     },
-    tags: ["startup", "remote", "react", "rails", "saas", "b2b"],
-    title: `Lead Front-End Software Engineer`,
-    url: `https://fivetonine.co/`,
+    tags: ['startup', 'remote', 'react', 'rails', 'saas', 'b2b'],
+    title: 'Lead Front-End Software Engineer',
+    url: 'https://fivetonine.co/',
   },
   {
-    dates: [`Jun 2020`, `Apr 2022`],
+    dates: ['Jun 2020', 'Apr 2022'],
     details: `•  Played a pivotal role in the Software Development Life Cycle by leading front-end modernization, enhancing user engagement through innovative features, and mentoring developers to improve code quality, utilizing web frameworks and interactive technologies.
 
 • Directed the transformation of Rails HAML views into React components, modernizing the front end by deploying React and establishing a clear MVC architecture separation of concerns, thereby improving system architecture data throughput.
@@ -86,16 +86,16 @@ export const experience: any[] = [
 
 •  Led the Diverse Talent Clouds initiative, advancing talent matching diversity and enabling users to multidimensionally organize and access candidate information.`,
     location: {
-      city: `Chicago, IL`,
-      logo: `tmp`,
-      name: `The Mom Project`,
+      city: 'Chicago, IL',
+      logo: 'tmp',
+      name: 'The Mom Project',
     },
-    tags: ["startup", "remote", "react", "rails", "saas", "b2b", "b2c"],
-    title: `Senior Software Engineer`,
-    url: `https://www.themomproject.com/`,
+    tags: ['startup', 'remote', 'react', 'rails', 'saas', 'b2b', 'b2c'],
+    title: 'Senior Software Engineer',
+    url: 'https://www.themomproject.com/',
   },
   {
-    dates: [`Jun 2016`, `Jan 2020`],
+    dates: ['Jun 2016', 'Jan 2020'],
     details: `•  Directed Agile processes and coached the Development Team as a Scrum Master, translating user stories, overseeing backlogs, and conducting standups, thus improving project delivery and elevating code quality.
 
 •  Liaised closely with Developers, UX/UI Designers, Testers, and Product Managers to gather feedback, refine requirements, and ensure the product continued to meet user needs.
@@ -110,16 +110,16 @@ export const experience: any[] = [
 
 • Analyzing front-end performance using BrowserStack and Google PageSpeed Insights, implemented lazy loading and code splitting, and enhanced load times, ultimately increasing user retention by 20%.`,
     location: {
-      city: `Chicago, IL`,
-      logo: `nexttier`,
-      name: `NextTier Education / Follett Corporation`,
+      city: 'Chicago, IL',
+      logo: 'nexttier',
+      name: 'NextTier Education / Follett Corporation',
     },
-    tags: ["startup", "angular", "saas", "b2e"],
-    title: `Lead Front-End Software Engineer`,
-    url: `https://www.nexttier.com/`,
+    tags: ['startup', 'angular', 'saas', 'b2e'],
+    title: 'Lead Front-End Software Engineer',
+    url: 'https://www.nexttier.com/',
   },
   {
-    dates: [`Jun 2012`, `Jun 2016`],
+    dates: ['Jun 2012', 'Jun 2016'],
     details: `•  Leveraged skills in Full-Stack Web Development and UI/UX Design to build performant, secure, and scalable digital solutions enhancing user engagement and operational efficiency across Healthcare, Insurance, Energy, Mergers & Acquisitions, and Banking sectors.
 
 • Developed an interactive dashboard tailored for a financial organization by integrating Google Charts and Bootstrap using SASS, focusing on user interface enhancement and interaction optimization.
@@ -128,23 +128,23 @@ export const experience: any[] = [
 
 • Guided Junior Developers and interns in technical skills and best practices, improving code quality and team efficiency, while offering career advice and identifying opportunities for growth.`,
     location: {
-      city: `Chicago, IL`,
-      logo: `wmp`,
-      name: `West Monroe Partners`,
+      city: 'Chicago, IL',
+      logo: 'wmp',
+      name: 'West Monroe Partners',
     },
-    tags: ["consulting", "microsoft", "angular", "b2b"],
-    title: `Senior Technology Consultant`,
-    url: `https://www.westmonroepartners.com/`,
+    tags: ['consulting', 'microsoft', 'angular', 'b2b'],
+    title: 'Senior Technology Consultant',
+    url: 'https://www.westmonroepartners.com/',
   },
 ].map((e) => ({
   ...e,
   details:
-    typeof e.details === "string"
+    typeof e.details === 'string'
       ? e.details
-          .replace(/\n*•\s+/g, ";")
-          .split(";")
+          .replace(/\n*•\s+/g, ';')
+          .split(';')
           .filter((i) => i?.length > 0)
       : e.details,
 }));
 
-export const overview: string = `I am a dedicated and user-focused front-end developer with 13+ years of experience building all aspects of the UX and UI for web and mobile apps. I'm passionate about creating engaging, intuitive experiences with consistent, delightful design, all built using clean, well-organized, and reusable code.`;
+export const overview = 'I am a dedicated and user-focused front-end developer with 13+ years of experience building all aspects of the UX and UI for web and mobile apps. I\'m passionate about creating engaging, intuitive experiences with consistent, delightful design, all built using clean, well-organized, and reusable code.';

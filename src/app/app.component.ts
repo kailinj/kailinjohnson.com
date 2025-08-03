@@ -6,21 +6,18 @@ import { RouterOutlet } from '@angular/router';
 import { routeTransitionAnimations } from './app-animations';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
-  animations: [routeTransitionAnimations]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  animations: [routeTransitionAnimations],
 })
 export class AppComponent {
-  public config$;
-  public icons = [`back`, `collapse-all`, `expand-all`, `grow`, `shrink`];
-  public title = "Kailin Johnson";
+  public config$: any;
+  public icons = ['back', 'collapse-all', 'expand-all', 'grow', 'shrink'];
+  public title = 'Kailin Johnson';
 
-  constructor(
-    iconRegistry: MatIconRegistry,
-    sanitizer: DomSanitizer
-  ) {
-    this.icons.forEach(i => {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    this.icons.forEach((i) => {
       iconRegistry.addSvgIcon(
         i,
         sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/${i}.svg`)
@@ -32,7 +29,7 @@ export class AppComponent {
     return (
       outlet &&
       outlet.activatedRouteData &&
-      outlet.activatedRouteData["animationState"]
+      outlet.activatedRouteData['animationState']
     );
   }
 }

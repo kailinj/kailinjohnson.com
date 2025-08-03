@@ -6,25 +6,25 @@ import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
   {
-    path: "resume",
+    path: 'resume',
     component: ResumeComponent,
     data: {
-      animationState: "Two",
-      name: "resume"
+      animationState: 'Two',
+      name: 'resume'
     }
   },
   {
-    path: "home",
+    path: 'home',
     component: HomeComponent,
     data: {
-      animationState: "One",
-      name: "home"
+      animationState: 'One',
+      name: 'home'
     }
   },
   {
-    path: "",
-    pathMatch: "full",
-    redirectTo: "/home"
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/home'
   }
 ];
 

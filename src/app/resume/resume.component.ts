@@ -4,33 +4,33 @@ import {
   style,
   transition,
   trigger,
-} from "@angular/animations";
-import { Component, HostBinding, OnInit, ViewChild } from "@angular/core";
-import { MediaObserver } from "@angular/flex-layout";
-import { MatSidenav } from "@angular/material/sidenav";
-import { Router } from "@angular/router";
+} from '@angular/animations';
+import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
+import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
-import { slideDownFadeIn } from "app/app-animations";
-import { education, experience, overview } from "./resume.constants";
+import { slideDownFadeIn } from 'app/app-animations';
+import { education, experience, overview } from './resume.constants';
 
 @Component({
-  selector: "app-resume",
-  templateUrl: "./resume.component.html",
-  styleUrls: ["./resume.component.scss"],
+  selector: 'app-resume',
+  templateUrl: './resume.component.html',
+  styleUrls: ['./resume.component.scss'],
   animations: [
-    trigger("pageAnimations", [
-      transition(":enter", [
-        query(".mat-sidenav-container", [
+    trigger('pageAnimations', [
+      transition(':enter', [
+        query('.mat-sidenav-container', [
           style(slideDownFadeIn.out),
           animate(slideDownFadeIn.easing, style(slideDownFadeIn.in)),
         ]),
-        query(".resume-content", [
+        query('.resume-content', [
           style(slideDownFadeIn.out),
           animate(`${slideDownFadeIn.easing}`, style(slideDownFadeIn.in)),
         ]),
       ]),
-      transition(":leave", [
-        query(".mat-toolbar, .mat-sidenav-container", [
+      transition(':leave', [
+        query('.mat-toolbar, .mat-sidenav-container', [
           style(slideDownFadeIn.in),
           animate(slideDownFadeIn.easing, style(slideDownFadeIn.out)),
         ]),
@@ -39,12 +39,12 @@ import { education, experience, overview } from "./resume.constants";
   ],
 })
 export class ResumeComponent implements OnInit {
-  @HostBinding("@pageAnimations")
+  @HostBinding('@pageAnimations')
   public animatePage = true;
-  @ViewChild("sidenav", { static: true }) sidenav: MatSidenav;
+  @ViewChild('sidenav', { static: true }) sidenav!: MatSidenav;
 
   get screenIsXsOrSm() {
-    return this.media.isActive("xs") || this.media.isActive("sm");
+    return this.media.isActive('xs') || this.media.isActive('sm');
   }
 
   get sidenavOpen() {
@@ -54,8 +54,8 @@ export class ResumeComponent implements OnInit {
   public education: any[] = education;
   public experience: any[] = experience;
   public overview: string = overview;
-  public showSidenav: boolean = false;
-  public showToolbar: boolean = false;
+  public showSidenav = false;
+  public showToolbar = false;
 
   constructor(private router: Router, public media: MediaObserver) {}
 
@@ -74,7 +74,7 @@ export class ResumeComponent implements OnInit {
     this.showSidenav = false;
     // this.sidenav.close();
     setTimeout(() => {
-      this.router.navigate(["home"]);
+      this.router.navigate(['home']);
     }, 500);
   }
 }

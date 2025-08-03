@@ -4,19 +4,19 @@ import { MediaObserver } from '@angular/flex-layout';
 @Injectable()
 export class ScreenService {
   get isLg() {
-    return this.media.isActive("lg");
+    return this.media.isActive('lg');
   }
   get isMd() {
-    return this.media.isActive("md");
+    return this.media.isActive('md');
   }
   get isSm() {
-    return this.media.isActive("sm");
+    return this.media.isActive('sm');
   }
   get isXl() {
-    return this.media.isActive("xl");
+    return this.media.isActive('xl');
   }
   get isXs() {
-    return this.media.isActive("xs");
+    return this.media.isActive('xs');
   }
   get isXsOrSm() {
     return this.isXs || this.isSm;

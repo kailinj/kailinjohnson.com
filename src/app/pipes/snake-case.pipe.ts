@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: "snakeCase",
+  name: 'snakeCase',
 })
 export class SnakeCasePipe implements PipeTransform {
   transform(value: string, ...args: any[]): any {
@@ -9,9 +9,9 @@ export class SnakeCasePipe implements PipeTransform {
       const separators = new RegExp(/[\s_\+\/(\.]+/g);
       const lowerUpperCase = new RegExp(/([a-z])(A-Z)/g);
       value = value
-        .replace(separators, "-")
-        .replace(")", "")
-        .replace(lowerUpperCase, `$1-$2`)
+        .replace(separators, '-')
+        .replace(')', '')
+        .replace(lowerUpperCase, '$1-$2')
         .toLowerCase();
       return value;
     } else {

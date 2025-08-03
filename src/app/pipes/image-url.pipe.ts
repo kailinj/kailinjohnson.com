@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ImageUrlPipe implements PipeTransform {
 
-  transform(value: any, dir: string, type: string = `svg`): string {
+  transform(value: any, dir: string, type: string = 'svg'): string {
     return `assets/${dir}/${value}.${type}`;
   }
 

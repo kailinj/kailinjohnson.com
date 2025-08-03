@@ -3,23 +3,27 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ScreenService } from 'app/services/screen.service';
 
 @Component({
-  selector: "app-history",
-  templateUrl: "./history.component.html",
-  styleUrls: ["./history.component.scss"]
+  selector: 'app-history',
+  templateUrl: './history.component.html',
+  styleUrls: ['./history.component.scss'],
 })
 export class HistoryComponent implements OnInit {
-  @Input() history: any[];
-  @Input() title: string;
+  @Input() history: any[] = [];
+  @Input() title = '';
 
-  constructor(public screen: ScreenService) { }
+  constructor(public screen: ScreenService) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   goTo(url: string) {
-    window.open(url, "_blank");
+    window.open(url, '_blank');
   }
 
   hasSections(details: any[]) {
-    return details && details.length && !((typeof details[0] === 'string') || (details[0] instanceof String));
+    return (
+      details &&
+      details.length &&
+      !(typeof details[0] === 'string' || details[0] instanceof String)
+    );
   }
 }

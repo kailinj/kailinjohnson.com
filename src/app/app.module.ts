@@ -22,11 +22,7 @@ import { ResumeModule } from "./resume/resume.module";
 import { SignatureComponent } from "./signature/signature.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SignatureComponent,
-  ],
+  declarations: [AppComponent, HomeComponent, SignatureComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -39,15 +35,14 @@ import { SignatureComponent } from "./signature/signature.component";
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    HttpClientModule,
     AppRoutingModule,
     PipesModule,
-    ResumeModule
+    ResumeModule,
   ],
   exports: [],
   bootstrap: [AppComponent],
-  providers: [ScreenService]
+  providers: [ScreenService],
 })
 export class AppModule {
-  constructor() { }
+  constructor() {}
 }
