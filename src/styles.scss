@@ -25,7 +25,8 @@ $kj-theme: mat.define-light-theme(
   )
 );
 
-@include mat.core($kj-theme);
+@include mat.elevation-classes();
+@include mat.app-background();
 @include mat.all-component-themes($kj-theme);
 
 /* You can add global styles to this file, and also import other style files */

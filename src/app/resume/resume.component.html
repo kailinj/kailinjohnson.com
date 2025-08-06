@@ -6,7 +6,7 @@
       #sidenav
       [mode]="screenIsXsOrSm ? 'over' : 'side'"
       [opened]="sidenavOpen"
-    >
+      >
       <section class="section-padded">
         <app-skills></app-skills>
       </section>
@@ -17,7 +17,7 @@
         fxLayout="column"
         fxLayoutAlign="start center"
         fxLayoutGap="16px"
-      >
+        >
         <section>
           <div fxLayout="row" fxLayoutGap="12px">
             <img class="avatar round" src="assets/img/me.jpeg" height="150" alt="Kailin Johnson profile photo" />
@@ -26,7 +26,7 @@
                 [class]="
                   media.isActive('xs') ? 'mat-headline' : 'mat-display-1'
                 "
-              >
+                >
                 Kailin Johnson
               </div>
               <div class="mat-subheading-2">{{ overview }}</div>
@@ -39,9 +39,11 @@
         <section>
           <app-history title="Education" [history]="education"></app-history>
         </section>
-        <section *ngIf="screenIsXsOrSm">
-          <app-skills></app-skills>
-        </section>
+        @if (screenIsXsOrSm) {
+          <section>
+            <app-skills></app-skills>
+          </section>
+        }
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

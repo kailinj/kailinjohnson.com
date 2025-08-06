@@ -10,16 +10,16 @@
   </button>
 </div>
 <mat-accordion #skillAccordion="matAccordion" multi="true">
-  <mat-expansion-panel
-    [(expanded)]="skill.isExpanded"
-    *ngFor="let skill of skills; let index"
-  >
-    <mat-expansion-panel-header class="mat-body-2">{{
-      skill.section
-    }}</mat-expansion-panel-header>
-    <mat-list dense>
-      <mat-list-item
-        *ngFor="let item of skill.items"
+  @for (skill of skills; track skill) {
+    <mat-expansion-panel
+      [(expanded)]="skill.isExpanded"
+      >
+      <mat-expansion-panel-header class="mat-body-2">{{
+        skill.section
+      }}</mat-expansion-panel-header>
+      <mat-list dense>
+        @for (item of skill.items; track item) {
+          <mat-list-item
         [@activeViewToggled]="
           minViewActive
             ? 'minimal'
@@ -27,16 +27,18 @@
             ? 'detailed-sm'
             : 'detailed'
         "
-      >
-        <img
-          matListAvatar
-          [src]="item.name | snakeCase | imageUrl : 'skills'"
-          [matTooltip]="minViewActive ? item.name : null"
-        />
-        <p matLine>
-          {{ item.name }}
-        </p>
-      </mat-list-item>
-    </mat-list>
-  </mat-expansion-panel>
+            >
+            <img
+              matListAvatar
+              [src]="item.name | snakeCase | imageUrl : 'skills'"
+              [matTooltip]="minViewActive ? item.name : null"
+              />
+            <p matLine>
+              {{ item.name }}
+            </p>
+          </mat-list-item>
+        }
+      </mat-list>
+    </mat-expansion-panel>
+  }
 </mat-accordion>
