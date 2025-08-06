@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
+import { Component } from "@angular/core";
+import { MatIconRegistry } from "@angular/material/icon";
+import { DomSanitizer } from "@angular/platform-browser";
+import { RouterOutlet } from "@angular/router";
 
-import { routeTransitionAnimations } from './app-animations';
+import { routeTransitionAnimations } from "./app-animations";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
   animations: [routeTransitionAnimations],
 })
 export class AppComponent {
   public config$: any;
-  public icons = ['back', 'collapse-all', 'expand-all', 'grow', 'shrink'];
-  public title = 'Kailin Johnson';
+  public icons = ["back", "collapse-all", "expand-all", "grow", "shrink"];
+  public title = "Kailin Johnson";
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     this.icons.forEach((i) => {
@@ -29,7 +29,7 @@ export class AppComponent {
     return (
       outlet &&
       outlet.activatedRouteData &&
-      outlet.activatedRouteData['animationState']
+      outlet.activatedRouteData["animationState"]
     );
   }
 }

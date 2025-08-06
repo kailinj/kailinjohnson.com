@@ -1,35 +1,50 @@
 {
-  "root": true,
-  "ignorePatterns": ["projects/**/*"],
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
   "overrides": [
     {
-      "files": ["*.ts"],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "project": ["src/tsconfig.json"]
-      },
-      "plugins": ["@typescript-eslint", "@angular-eslint"],
-      "extends": ["eslint:recommended"],
       "env": {
         "browser": true,
-        "node": true,
-        "es6": true
+        "es6": true,
+        "node": true
       },
+      "extends": [
+        // "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "files": [
+        "*.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 2020, // Or higher, e.g., 2022 for private class fields
+        "ecmaFeatures": {
+          "decorators": true,
+          "jsx": true
+        },
+        "project": "src/tsconfig.json",
+        "sourceType": "module"
+      },
+      "plugins": [
+        "@typescript-eslint",
+        "@angular-eslint"
+      ],
       "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
-          }
-        ],
         "@angular-eslint/component-selector": [
           "error",
           {
-            "type": "element",
             "prefix": "app",
-            "style": "kebab-case"
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "app",
+            "style": "camelCase",
+            "type": "attribute"
           }
         ],
         "@typescript-eslint/no-explicit-any": "off",
@@ -45,38 +60,51 @@
             "argsIgnorePattern": "^_"
           }
         ],
-        "no-unused-vars": "off",
-        "no-undef": "off",
-        "no-console": [
-          "warn",
-          {
-            "allow": ["warn", "error"]
-          }
-        ],
-        "quotes": ["error", "single"],
         "max-len": [
           "warn",
           {
             "code": 140
           }
         ],
-        "no-useless-escape": "warn"
+        "no-console": [
+          "warn",
+          {
+            "allow": [
+              "warn",
+              "error"
+            ]
+          }
+        ],
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "no-useless-escape": "warn",
+        "quotes": [
+          "error",
+          "single"
+        ]
       }
     },
     {
-      "files": ["*.spec.ts"],
       "env": {
         "jasmine": true
       },
+      "files": [
+        "*.spec.ts"
+      ],
       "rules": {
         "no-undef": "off"
       }
     },
     {
-      "files": ["*.html"],
+      "files": [
+        "*.html"
+      ],
       "parser": "@angular-eslint/template-parser",
-      "plugins": ["@angular-eslint/template"],
+      "plugins": [
+        "@angular-eslint/template"
+      ],
       "rules": {}
     }
-  ]
+  ],
+  "root": true
 }
