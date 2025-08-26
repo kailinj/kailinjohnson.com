@@ -23,6 +23,25 @@ export const education: any[] = [
 
 export const experience: any[] = [
   {
+    location: {
+      city: `Chicago, IL`,
+      logo: `eventcreate`,
+      name: `EventCreate`,
+    },
+    tags: ["startup", "remote", "react", "rails", "saas", "b2b"],
+    title: "Senior Front-End Software Engineer",
+    url: "https://eventcreate.com/",
+    dates: [`Feb 2025`, `May 2025`],
+
+    details: `•  Designed and developed a single-page application (SPA) for internal administration of the web platform using Next.js, React, TypeScript, HeroUI (NextUI), TanStack Table, React Hook Form, and Prisma to connect to a PostgreSQL instance, offering a proof-of-concept for having a dedicated JavaScript frontend app in lieu of using Rails views in a monorepo.
+
+•  Collaborated with the Co-founders, Head of Engineering, and Customer Success Lead to translate customer requests and business needs into technical requirements and prioritize upcoming work.
+
+•  Enhanced existing features using Ruby on Rails, including photo uploading & editing and Geolocation search using Google Places API, providing a seamless, consistent experience for users across the platform.
+
+•  Established and enforced best practices for front-end development, utilizing React, TypeScript, ESLint, Prettier, and auto-fixing via IDE extensions to standardize formatting, encourage proper typing, and ensure correct component usage, resulting in improved code quality and reduced bugs.`,
+  },
+  {
     dates: [`May 2022`, `Sep 2024`],
     details: `•  Transformed front-end development practices by redesigning architecture, enforcing best practices in development, and fostering a collaborative and agile environment through strong leadership, while leveraging client-side technologies such as React, Ruby on Rails, and GraphQL.
 
@@ -55,7 +74,7 @@ export const experience: any[] = [
 • Ensured compliance with WCAG, Section 508, and A11Y accessibility standards by integrating AudioEye, utilizing A11Y checklists, and employing Eslint plugins.`,
     location: {
       city: `Chicago, IL`,
-      logo: `ftn`,
+      logo: `fivetonine`,
       name: `Five to Nine`,
     },
     tags: ["startup", "remote", "react", "rails", "saas", "b2b"],

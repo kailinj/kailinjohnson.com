@@ -67,6 +67,13 @@ export const mySkills: Array<{
     url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
+    name: "HeroUI",
+    category: "UI Development",
+    description:
+      "Beautiful, fast and modern React UI library for building accessible and customizable web applications.",
+    url: "https://heroui.com/",
+  },
+  {
     name: "HTML5",
     category: "UI Development",
     description: "The standard markup language for web development.",
