@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px">
+<div class="flexColumn flexCenter flexGap16">
   <h1
     [class.mat-display-2]="screen.isXs"
     [class.mat-display-3]="screen.isSm"
@@ -6,9 +6,9 @@
     class="intro"
   >
     <div
-      [fxLayout]="screen.isXs ? 'column' : 'row'"
-      fxLayoutAlign="center center"
-      fxLayoutWrap
+      [class.flexColumn]="screen.isXs"
+      [class.flexRow]="!screen.isXs"
+      class="flexCenter flexGap16 flexWrap"
     >
       <div class="hello-im">Hello! I'm Kailin.</div>
     </div>
@@ -21,12 +21,7 @@
   >
     A senior developer & designer based in Chicago.
   </h3>
-  <div
-    class="buttons"
-    fxLayout="row"
-    fxLayoutAlign="center center"
-    fxLayoutGap="16px"
-  >
+  <div class="buttons flexRow flexCenter flexGap16">
     <button color="primary" mat-flat-button [routerLink]="['/resume']">
       Learn more
     </button>

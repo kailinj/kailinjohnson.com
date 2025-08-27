@@ -2,32 +2,25 @@
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
 
-$kj-primary: mat.define-palette(mat.$pink-palette, 700, 500, 900);
-$kj-accent: mat.define-palette(mat.$amber-palette);
-
-$kj-warn: mat.define-palette(mat.$red-palette);
-
-$kj-typography: mat.define-typography-config(
-  $font-family: "Chivo, Roboto, monospace",
-  $body-1: mat.define-typography-level(14px, 20px, 300),
-  $title: mat.define-typography-level(20px, 32px, 600),
-  $subheading-2: mat.define-typography-level(18px, 28px, 400),
-);
-
-$kj-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $kj-primary,
-      accent: $kj-accent,
-      warn: $kj-warn,
-    ),
-    typography: $kj-typography,
-  )
-);
-
-@include mat.elevation-classes();
-@include mat.app-background();
-@include mat.all-component-themes($kj-theme);
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$magenta-palette,
+        accent: mat.$orange-palette,
+        tertiary: mat.$violet-palette,
+        theme-type: light,
+      ),
+      typography: (
+        font-family: "Chivo, Roboto, monospace",
+        bold-weight: 900,
+        medium-weight: 500,
+        regular-weight: 300,
+      ),
+      density: 0,
+    )
+  );
+}
 
 /* You can add global styles to this file, and also import other style files */
 

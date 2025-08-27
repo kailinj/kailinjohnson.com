@@ -1,25 +1,20 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
+import { MatListModule } from "@angular/material/list";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatToolbarModule } from "@angular/material/toolbar";
 
-import { PipesModule } from './../pipes/pipes.module';
-import { HistoryModule } from './../history/history.module';
-import { SkillsModule } from './../skills/skills.module';
-import { ResumeComponent } from './resume.component';
+import { HistoryModule } from "./../history/history.module";
+import { PipesModule } from "./../pipes/pipes.module";
+import { SkillsModule } from "./../skills/skills.module";
+import { ResumeComponent } from "./resume.component";
 
 @NgModule({
-  declarations: [ResumeComponent],
   imports: [
     CommonModule,
-    RouterModule,
-    FlexLayoutModule,
     MatButtonModule,
     MatCardModule,
     MatIconModule,
@@ -27,11 +22,12 @@ import { ResumeComponent } from './resume.component';
     MatSidenavModule,
     MatToolbarModule,
     HistoryModule,
+    ResumeComponent,
     SkillsModule,
-    PipesModule
+    PipesModule,
   ],
   exports: [],
-  providers: []
+  providers: [],
 })
 export class ResumeModule {
   constructor() {}

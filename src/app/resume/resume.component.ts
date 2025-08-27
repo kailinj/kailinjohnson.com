@@ -1,50 +1,43 @@
-import {
-  animate,
-  query,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
-import { Component, HostBinding, OnInit, ViewChild } from '@angular/core';
-import { MediaObserver } from '@angular/flex-layout';
-import { MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
+import { Router, RouterModule } from "@angular/router";
 
-import { slideDownFadeIn } from 'app/app-animations';
-import { education, experience, overview } from './resume.constants';
+import { CommonModule } from "@angular/common";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
+import { MatListModule } from "@angular/material/list";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { HistoryModule } from "app/history/history.module";
+import { PipesModule } from "app/pipes/pipes.module";
+import { ScreenService } from "app/services/screen.service";
+import { SkillsModule } from "app/skills/skills.module";
+import { education, experience, overview } from "./resume.constants";
 
 @Component({
-  selector: 'app-resume',
-  templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.scss'],
-  animations: [
-    trigger('pageAnimations', [
-      transition(':enter', [
-        query('.mat-sidenav-container', [
-          style(slideDownFadeIn.out),
-          animate(slideDownFadeIn.easing, style(slideDownFadeIn.in)),
-        ]),
-        query('.resume-content', [
-          style(slideDownFadeIn.out),
-          animate(`${slideDownFadeIn.easing}`, style(slideDownFadeIn.in)),
-        ]),
-      ]),
-      transition(':leave', [
-        query('.mat-toolbar, .mat-sidenav-container', [
-          style(slideDownFadeIn.in),
-          animate(slideDownFadeIn.easing, style(slideDownFadeIn.out)),
-        ]),
-      ]),
-    ]),
+  selector: "app-resume",
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    HistoryModule,
+    SkillsModule,
+    PipesModule,
   ],
+  templateUrl: "./resume.component.html",
+  styleUrls: ["./resume.component.scss"],
 })
 export class ResumeComponent implements OnInit {
-  @HostBinding('@pageAnimations')
   public animatePage = true;
-  @ViewChild('sidenav', { static: true }) sidenav!: MatSidenav;
+  @ViewChild("sidenav", { static: true }) sidenav!: MatSidenav;
 
   get screenIsXsOrSm() {
-    return this.media.isActive('xs') || this.media.isActive('sm');
+    return this.media.isXsOrSm;
   }
 
   get sidenavOpen() {
@@ -57,7 +50,7 @@ export class ResumeComponent implements OnInit {
   public showSidenav = false;
   public showToolbar = false;
 
-  constructor(private router: Router, public media: MediaObserver) {}
+  constructor(private router: Router, public media: ScreenService) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -74,7 +67,7 @@ export class ResumeComponent implements OnInit {
     this.showSidenav = false;
     // this.sidenav.close();
     setTimeout(() => {
-      this.router.navigate(['home']);
+      this.router.navigate(["home"]);
     }, 500);
   }
 }

@@ -1,24 +1,31 @@
-import { state, style, trigger } from '@angular/animations';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MediaObserver } from '@angular/flex-layout';
-import { MatAccordion } from '@angular/material/expansion';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { MatAccordion, MatExpansionModule } from "@angular/material/expansion";
 
-import { mySkills } from './skills.constants';
+import { CommonModule } from "@angular/common";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { MatListModule } from "@angular/material/list";
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { PipesModule } from "app/pipes/pipes.module";
+import { ScreenService } from "app/services/screen.service";
+import { mySkills } from "./skills.constants";
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss'],
-  animations: [
-    trigger('activeViewToggled', [
-      state('detailed', style({ width: '100%', 'margin-top': '0' })),
-      state('detailed-sm', style({ width: 'auto', 'margin-top': '0' })),
-      state('minimal', style({ width: '40px', 'margin-top': '-5px' })),
-    ]),
+  selector: "app-skills",
+  templateUrl: "./skills.component.html",
+  styleUrls: ["./skills.component.scss"],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatListModule,
+    MatTooltipModule,
+    PipesModule,
   ],
 })
 export class SkillsComponent implements OnInit {
-  @ViewChild('skillAccordion', { static: true }) skillAccordion!: MatAccordion;
+  @ViewChild("skillAccordion", { static: true }) skillAccordion!: MatAccordion;
 
   public minViewActive = false;
   public skillCategories: Set<string> = new Set(
@@ -43,10 +50,10 @@ export class SkillsComponent implements OnInit {
   }
 
   get screenIsXsOrSm() {
-    return this.media.isActive('xs') || this.media.isActive('sm');
+    return this.media.isXsOrSm;
   }
 
-  constructor(public media: MediaObserver) {}
+  constructor(public media: ScreenService) {}
 
   ngOnInit() {
     this.skills.forEach((s) => (s.isExpanded = true));

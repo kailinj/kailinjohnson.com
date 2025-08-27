@@ -1,44 +1,35 @@
-<div fxLayout="row" fxLayoutAlign="space-between center">
-  <h2 fxFlex class="mat-headline no-margin">Skills</h2>
+<div class="flexRow flexAlignBetween flexJustifyCenter">
+  <h2 class="mat-headline no-margin flexAuto">Skills</h2>
   <button color="primary" mat-icon-button (click)="toggleView()">
-    <mat-icon [svgIcon]="minViewActive ? 'grow' : 'shrink'"></mat-icon>
+    <mat-icon>{{ minViewActive ? "grow" : "shrink" }}</mat-icon>
   </button>
   <button color="primary" mat-icon-button (click)="toggleAccordion()">
-    <mat-icon
-      [svgIcon]="(!allCollapsed ? 'collapse' : 'expand') + '-all'"
-    ></mat-icon>
+    <mat-icon>
+      {{ (!allCollapsed ? "collapse" : "expand") + "-all" }}
+      ></mat-icon
+    >
   </button>
 </div>
 <mat-accordion #skillAccordion="matAccordion" multi="true">
   @for (skill of skills; track skill) {
-    <mat-expansion-panel
-      [(expanded)]="skill.isExpanded"
-      >
-      <mat-expansion-panel-header class="mat-body-2">{{
-        skill.section
-      }}</mat-expansion-panel-header>
-      <mat-list dense>
-        @for (item of skill.items; track item) {
-          <mat-list-item
-        [@activeViewToggled]="
-          minViewActive
-            ? 'minimal'
-            : screenIsXsOrSm
-            ? 'detailed-sm'
-            : 'detailed'
-        "
-            >
-            <img
-              matListAvatar
-              [src]="item.name | snakeCase | imageUrl : 'skills'"
-              [matTooltip]="minViewActive ? item.name : null"
-              />
-            <p matLine>
-              {{ item.name }}
-            </p>
-          </mat-list-item>
-        }
-      </mat-list>
-    </mat-expansion-panel>
+  <mat-expansion-panel [(expanded)]="skill.isExpanded">
+    <mat-expansion-panel-header class="mat-body-2">{{
+      skill.section
+    }}</mat-expansion-panel-header>
+    <mat-list dense>
+      @for (item of skill.items; track item) {
+      <mat-list-item>
+        <img
+          matListAvatar
+          [src]="item.name | snakeCase | imageUrl : 'skills'"
+          [matTooltip]="minViewActive ? item.name : null"
+        />
+        <p matLine>
+          {{ item.name }}
+        </p>
+      </mat-list-item>
+      }
+    </mat-list>
+  </mat-expansion-panel>
   }
 </mat-accordion>

@@ -1,4 +1,4 @@
-<div fxFlexFill fxLayout="column" fxLayoutAlign="start stretch">
+<div class="flexColumn flexAlignStart flexJustifyStretch flexGrow">
   <mat-sidenav-container>
     <mat-sidenav
       class="skills-sidenav"
@@ -6,27 +6,25 @@
       #sidenav
       [mode]="screenIsXsOrSm ? 'over' : 'side'"
       [opened]="sidenavOpen"
-      >
+    >
       <section class="section-padded">
         <app-skills></app-skills>
       </section>
     </mat-sidenav>
     <mat-sidenav-content class="resume-content">
       <div
-        class="scroll-content"
-        fxLayout="column"
-        fxLayoutAlign="start center"
-        fxLayoutGap="16px"
-        >
+        class="scroll-content flexColumn flexAlignStart flexJustifyCenter flexGap16"
+      >
         <section>
-          <div fxLayout="row" fxLayoutGap="12px">
-            <img class="avatar round" src="assets/img/me.jpeg" height="150" alt="Kailin Johnson profile photo" />
-            <div fxLayout="column" fxLayoutGap="8px">
-              <div
-                [class]="
-                  media.isActive('xs') ? 'mat-headline' : 'mat-display-1'
-                "
-                >
+          <div class="flexRow flexGap12">
+            <img
+              class="avatar round"
+              src="assets/img/me.jpeg"
+              height="150"
+              alt="Kailin Johnson profile photo"
+            />
+            <div class="flexColumn flexGap8">
+              <div [class]="media.isXs ? 'mat-headline' : 'mat-display-1'">
                 Kailin Johnson
               </div>
               <div class="mat-subheading-2">{{ overview }}</div>
@@ -40,9 +38,9 @@
           <app-history title="Education" [history]="education"></app-history>
         </section>
         @if (screenIsXsOrSm) {
-          <section>
-            <app-skills></app-skills>
-          </section>
+        <section>
+          <app-skills></app-skills>
+        </section>
         }
       </div>
     </mat-sidenav-content>

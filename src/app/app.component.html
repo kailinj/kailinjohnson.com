@@ -1,7 +1,4 @@
-<div fxFlexFill
-     fxLayout="column"
-     fxLayoutAlign="start stretch"
-     [@triggerName]="prepareRoute(outlet)">
-  <div>{{config$ | async}}</div>
+<div class="flexGrow flexColumn flexAlignStart flexJustifyStretch">
+  <div>{{ config$ | async }}</div>
   <router-outlet #outlet="outlet"></router-outlet>
 </div>

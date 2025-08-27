@@ -1,37 +1,22 @@
-import { trigger, transition, query, style, animate, stagger, sequence, group } from '@angular/animations';
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
-import { slideDownFadeIn, animationEasing } from 'app/app-animations';
-import { ScreenService } from 'app/services/screen.service';
+import { ScreenService } from "app/services/screen.service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  animations: [
-    trigger('pageAnimations', [
-      transition(':enter', [
-        query('.hello-im div, svg, .description, .buttons', [
-          style(slideDownFadeIn.out),
-          stagger(150, [
-            animate(
-              slideDownFadeIn.easing,
-              style(slideDownFadeIn.in)
-            )])
-        ])
-      ])
-    ])
-  ]
+  selector: "app-home",
+  imports: [RouterModule],
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
+  providers: [ScreenService],
 })
 export class HomeComponent implements OnInit {
-  @HostBinding('@pageAnimations')
-
   public text = {
-    hello: Array.from('Hello!'),
-    im: Array.from('I\'m')
+    hello: Array.from("Hello!"),
+    im: Array.from("I'm"),
   };
 
-  constructor(public screen: ScreenService) { }
+  constructor(public screen: ScreenService) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 }
