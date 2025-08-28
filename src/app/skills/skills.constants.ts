@@ -67,6 +67,13 @@ export const mySkills: Array<{
     url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
+    name: "HeroUI",
+    category: "UI Development",
+    description:
+      "Beautiful, fast and modern React UI library for building accessible and customizable web applications.",
+    url: "https://heroui.com/",
+  },
+  {
     name: "HTML5",
     category: "UI Development",
     description: "The standard markup language for web development.",
@@ -389,6 +396,13 @@ export const mySkills: Array<{
     url: "https://www.figma.com/",
   },
   {
+    name: "GitHub CoPilot",
+    category: "Dev services",
+    description:
+      "An AI pair programmer that helps you write code faster and with less effort.",
+    url: "https://github.com/features/copilot",
+  },
+  {
     name: "Google Analytics",
     category: "Dev services",
     description:
@@ -488,6 +502,13 @@ export const mySkills: Array<{
     description:
       "An open-source error tracking that helps developers monitor and fix crashes in real time.",
     url: "https://sentry.io/",
+  },
+  {
+    name: "Vercel",
+    category: "Dev services",
+    description:
+      "A platform for frontend frameworks and static sites, built to integrate with your headless content, commerce, or database.",
+    url: "https://vercel.com/",
   },
   {
     name: "Visual Studio",
@@ -742,16 +763,16 @@ export const skills: any[] = [
     ],
   },
   {
-    section: `Soft Skills`,
+    section: "Soft Skills",
     items: [
-      `Attention to detail`,
-      `Creativity`,
-      `Curiosity`,
-      `Dedication`,
-      `Empathy`,
-      `Organization`,
-      `Problem-solving`,
-      `Working smarter`,
+      "Attention to detail",
+      "Creativity",
+      "Curiosity",
+      "Dedication",
+      "Empathy",
+      "Organization",
+      "Problem-solving",
+      "Working smarter",
     ],
   },
 ];
