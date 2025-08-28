@@ -10,7 +10,6 @@ import { ScreenService } from "app/services/screen.service";
   selector: "app-history",
   imports: [CommonModule, MatCardModule, MatChipsModule, PipesModule],
   templateUrl: "./history.component.html",
-  styleUrls: ["./history.component.scss"],
 })
 export class HistoryComponent implements OnInit {
   @Input() history: any[] = [];

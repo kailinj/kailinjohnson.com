@@ -47,7 +47,7 @@ export class ResumeComponent implements OnInit {
   public education: any[] = education;
   public experience: any[] = experience;
   public overview: string = overview;
-  public showSidenav = false;
+  public showSidenav = true;
   public showToolbar = false;
 
   constructor(private router: Router, public media: ScreenService) {}

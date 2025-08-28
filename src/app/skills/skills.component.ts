@@ -13,7 +13,6 @@ import { mySkills } from "./skills.constants";
 @Component({
   selector: "app-skills",
   templateUrl: "./skills.component.html",
-  styleUrls: ["./skills.component.scss"],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -34,7 +33,9 @@ export class SkillsComponent implements OnInit {
   public skills: any[] = Array.from(this.skillCategories).map((c) => ({
     section: c,
     isExpanded: true,
-    items: mySkills.filter((s) => s.category === c),
+    items: mySkills
+      .filter((s) => s.category === c)
+      .sort((a, b) => a.name.localeCompare(b.name)),
   }));
 
   get allCollapsed() {
@@ -69,5 +70,9 @@ export class SkillsComponent implements OnInit {
 
   public toggleView() {
     this.minViewActive = !this.minViewActive;
+  }
+
+  public goTo(url: string) {
+    window.open(url, "_blank");
   }
 }

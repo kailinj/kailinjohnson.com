@@ -3,16 +3,17 @@
 @use "@angular/material" as mat;
 
 html {
+  color-scheme: light dark;
   @include mat.theme(
     (
       color: (
         primary: mat.$magenta-palette,
-        accent: mat.$orange-palette,
-        tertiary: mat.$violet-palette,
+        tertiary: mat.$orange-palette,
         theme-type: light,
       ),
       typography: (
-        font-family: "Chivo, Roboto, monospace",
+        plain-family: "Chivo, Roboto, sans-serif",
+        brand-family: "Chivo, Roboto, sans-serif",
         bold-weight: 900,
         medium-weight: 500,
         regular-weight: 300,
@@ -20,6 +21,53 @@ html {
       density: 0,
     )
   );
+}
+
+:root {
+  @include mat.sidenav-overrides(
+    (
+      container-background-color: #ffffff50,
+    )
+  );
+  @include mat.list-overrides(
+    (
+      list-item-label-text-size: 14px,
+      list-item-hover-state-layer-color: #ffffff20,
+    )
+  );
+}
+
+.mat-title {
+  font: var(--mat-sys-title-medium);
+}
+.mat-subheading-1 {
+  font: var(--mat-sys-title-medium);
+}
+.mat-subheading-2 {
+  font: var(--mat-sys-title-medium);
+  font-weight: 400;
+}
+.mat-headline {
+  font: var(--mat-sys-headline-medium);
+}
+.mat-body-1 {
+  font: var(--mat-sys-body-medium);
+}
+.mat-body-2 {
+  font: var(--mat-sys-body-medium);
+  font-weight: 500;
+}
+.mat-display-1 {
+  font: var(--mat-sys-display-medium);
+}
+.mat-display-2 {
+  font: var(--mat-sys-display-small);
+}
+.mat-display-3 {
+  font: var(--mat-sys-display-large);
+}
+.mat-display-4 {
+  font: var(--mat-sys-display-large);
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -134,4 +182,88 @@ ul {
 
 .section-padded {
   padding: 12px;
+}
+
+// Flex layout replacement for Angular 15+
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+.flexGap8 {
+  gap: 8px;
+}
+.flexColumnGap8 {
+  column-gap: 8px;
+}
+.flexRowGap8 {
+  row-gap: 8px;
+}
+.flexGap12 {
+  gap: 12px;
+}
+.flexGap16 {
+  gap: 16px;
+}
+.flexCenter {
+  justify-content: center;
+  align-items: center;
+}
+.flexAlignCenter {
+  align-items: center;
+}
+.flexAlignBaseline {
+  align-items: baseline;
+}
+.flexAlignBetween {
+  align-items: space-between;
+}
+.flexAlignStart {
+  align-items: flex-start;
+}
+.flexAlignEnd {
+  align-items: flex-end;
+}
+.flexJustifyCenter {
+  justify-content: center;
+}
+.flexJustifyStart {
+  justify-content: flex-start;
+}
+.flexJustifyEnd {
+  justify-content: flex-end;
+}
+.flexJustifyStretch {
+  justify-content: stretch;
+}
+.flexWrap {
+  flex-wrap: wrap;
+}
+.flexNowrap {
+  flex-wrap: nowrap;
+}
+.flexFill {
+  flex: 1 1 auto;
+}
+.flexGrow {
+  flex-grow: 1;
+}
+.flexShrink {
+  flex-shrink: 1;
+}
+.flexNoGrow {
+  flex-grow: 0;
+}
+.flexNoShrink {
+  flex-shrink: 0;
+}
+.flexAuto {
+  flex: 1 1 auto;
+}
+.flexNone {
+  flex: none;
 }

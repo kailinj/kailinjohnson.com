@@ -1,35 +1,39 @@
 <div class="flexRow flexAlignBetween flexJustifyCenter">
   <h2 class="mat-headline no-margin flexAuto">Skills</h2>
-  <button color="primary" mat-icon-button (click)="toggleView()">
-    <mat-icon>{{ minViewActive ? "grow" : "shrink" }}</mat-icon>
-  </button>
   <button color="primary" mat-icon-button (click)="toggleAccordion()">
-    <mat-icon>
-      {{ (!allCollapsed ? "collapse" : "expand") + "-all" }}
-      ></mat-icon
-    >
+    <mat-icon
+      fontIcon="{{ !allCollapsed ? 'compress' : 'expand-all' }}"
+    ></mat-icon>
   </button>
 </div>
 <mat-accordion #skillAccordion="matAccordion" multi="true">
   @for (skill of skills; track skill) {
-  <mat-expansion-panel [(expanded)]="skill.isExpanded">
+  <mat-expansion-panel [(expanded)]="skill.isExpanded" style="padding: 0">
     <mat-expansion-panel-header class="mat-body-2">{{
       skill.section
     }}</mat-expansion-panel-header>
-    <mat-list dense>
+    <mat-action-list dense style="margin: 0 -24px" role="list">
       @for (item of skill.items; track item) {
-      <mat-list-item>
+      <!-- <li> -->
+      <button
+        mat-list-item
+        (click)="goTo(item.url)"
+        target="_blank"
+        matTooltip="{{ item.description }}"
+        matTooltipPosition="right"
+      >
         <img
-          matListAvatar
+          matListItemAvatar
           [src]="item.name | snakeCase | imageUrl : 'skills'"
-          [matTooltip]="minViewActive ? item.name : null"
+          style="background-color: transparent; border-radius: 0"
         />
-        <p matLine>
+        <h3 matListItemTitle class="mat-body-1">
           {{ item.name }}
-        </p>
-      </mat-list-item>
+        </h3>
+      </button>
+      <!-- </li> -->
       }
-    </mat-list>
+    </mat-action-list>
   </mat-expansion-panel>
   }
 </mat-accordion>

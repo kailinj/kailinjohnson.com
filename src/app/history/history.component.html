@@ -1,13 +1,13 @@
 <h2 class="mat-headline">{{ title }}</h2>
-<div
-  class="flexColumn flexGap12 flexAlignStart flexJustifyStretch"
-  width="100%"
->
+<div class="flexColumn flexGap12 flexJustifyStretch" width="100%">
   @for (item of history; track item) {
-  <mat-card class="flexColumn">
-    <mat-card-header [class.m-card-header-bordered]="item.details?.length">
+  <mat-card class="flexColumn flexGrow">
+    <mat-card-header
+      [class.m-card-header-bordered]="item.details?.length"
+      [title]="item.title"
+    >
       <img
-        matCardAvatar
+        mat-card-avatar
         [src]="item.location?.logo | imageUrl : 'history'"
         (click)="goTo(item.url)"
         style="cursor: pointer"
@@ -15,13 +15,15 @@
         [name]="item.location?.name"
       />
       <mat-card-title>
-        <div class="mat-title">{{ item.title }}</div>
+        <div class="mat-heading">{{ item.title }}</div>
       </mat-card-title>
       <mat-card-subtitle>
-        <div class="mat-subheading-2 flexRow flexAlignBaseline flexGap8">
+        <div
+          class="mat-subheading-1 flexRow flexAlignBaseline flexColumnGap8 flexWrap"
+        >
           <div>{{ item.location?.name }}</div>
           <div class="separator">|</div>
-          <div class="dates">
+          <div class="mat-subheading-2">
             {{ item.dates[0] }} &ndash; {{ item.dates[1] }}
           </div>
         </div>
