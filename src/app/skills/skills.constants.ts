@@ -396,7 +396,7 @@ export const mySkills: Array<{
     url: "https://www.figma.com/",
   },
   {
-    name: "GitHub CoPilot",
+    name: "GitHub Copilot",
     category: "Dev services",
     description:
       "An AI pair programmer that helps you write code faster and with less effort.",
@@ -712,7 +712,6 @@ export const skills: any[] = [
   {
     section: "Dev services",
     items: [
-      "Angular CLI",
       "AWS",
       "Babel",
       "Cloudinary",
@@ -736,6 +735,7 @@ export const skills: any[] = [
       "Redis",
       "SendGrid",
       "Sentry",
+      "Vercel",
       "Visual Studio",
       "Vite",
       "Webpack",
@@ -775,4 +775,51 @@ export const skills: any[] = [
       "Working smarter",
     ],
   },
+];
+
+export const passions: string[] = [
+  `🌎 Building products that contribute to social good`,
+  `🤝 Positive team culture`,
+  `♿️ UX/UI accessibility & consistency`,
+  `1️⃣ Single source of truth`,
+  `⚖️ Healthy balance of collaboration vs. focus time`,
+  `🗣️ Fearless feedback & constant improvement`,
+  `📊 Data-driven decision-making`,
+  `🔄 Iterative development & design`,
+  `🧠 Working smarter, not harder`,
+  `♻️ Componentizing duplicated code`,
+  `📚 Strategic use of 3rd-party libraries`,
+  `🦄 Focusing on the platform's unique offerings & challenges instead of reinventing the wheel`,
+  `🗃️ Straightforward code structure`,
+  `📇 Consistent, self-evident naming conventions`,
+];
+
+export const projects: Array<{
+  name: string;
+  description: string;
+  url?: string;
+  technologies?: string[];
+}> = [
+  {
+    name: "Personal Portfolio",
+    description:
+      "A personal portfolio website to showcase my skills, projects, and experiences.",
+    url: "https://github.com/kailinj/kailinjohnson.com",
+    technologies: ["Angular", "Angular Material", "TypeScript"],
+  },
+];
+
+export const hobbies: string[] = [
+  "Drawing ✏️",
+  "Painting 🎨",
+  "Crafts 🧵",
+  "Dogs 🐕",
+  "Puzzles 🧩",
+  "Board games 🎲",
+  "Thrifting 🛍️",
+  "Piano 🎹",
+  "Improv 🎭",
+  "Musicals 🎼",
+  "Comedy 😂",
+  "Nature 🌲",
 ];

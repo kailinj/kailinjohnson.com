@@ -23,136 +23,96 @@ export const education: any[] = [
 
 export const experience: any[] = [
   {
-    dates: [`Feb 2025`, `May 2025`],
+    dates: [`Jul 2025`, `Present`],
+    overview:
+      "Volunteer work focused on technical development and support for non-profit organizations.",
 
-    details: `•  Designed and developed a single-page application (SPA) for internal administration of the web platform using Next.js, React, TypeScript, HeroUI (NextUI), TanStack Table, React Hook Form, and Prisma to connect to a PostgreSQL instance, offering a proof-of-concept for having a dedicated JavaScript frontend app in lieu of using Rails views in a monorepo.
-    
-    •  Collaborated with the Co-founders, Head of Engineering, and Customer Success Lead to translate customer requests and business needs into technical requirements and prioritize upcoming work.
-    
-    •  Enhanced existing features using Ruby on Rails, including photo uploading & editing and Geolocation search using Google Places API, providing a seamless, consistent experience for users across the platform.
-    
-    •  Established and enforced best practices for front-end development, utilizing React, TypeScript, ESLint, Prettier, and auto-fixing via IDE extensions to standardize formatting, encourage proper typing, and ensure correct component usage, resulting in improved code quality and reduced bugs.`,
+    details: `•  Performed in-depth website audit report and provided web hosting guidance for Burn Prevention Network, saving $4,762 annually in hosting and contractor costs using Google PageSpeed Insights, Lighthouse, 
+    •  Modernized platform and created branding plan for The Luck Group using Figma, saving $3,700+, allowing them to reach a greater audience, boost ability to fundraise, and introduce more disadvantaged families to outdoor events.`,
+    location: {
+      logo: `catchafire`,
+      name: `Catchafire`,
+    },
+    tags: ["remote", "react", "volunteer"],
+    title: "Staff Frontend Software Engineer",
+    url: "https://catchafire.org/",
+  },
+  {
+    dates: [`Feb 2025`, `May 2025`],
+    overview:
+      "Helped build an internal admin SPA for a web platform using Next.js, React, TypeScript, TanStack Table, React Hook Form, and Prisma to connect to a PostgreSQL instance.",
+
+    details: `• Created PoC for internal admin site as a standalone SPA to create and manage 750K+ event planners, website themes, blog posts, and venues with role-based access using TypeScript, Next.js, and Prisma. 
+    • Designed advanced, reusable data management components with sorting, pagination, in-line editing, multi-select, and type-specific multi-column filtering using TypeScript, React, and TanStack (React Query, React Table).
+    • Implemented optimized server-state caching and data synchronization strategies using TypeScript and TanStack React Query, projected to improve internal data management efficiency by 40%.
+    • Enhanced photo upload/editing and Geolocation search features using JavaScript, Ruby on Rails, and Google Places API, providing a seamless, consistent experience for over 750,000 users across the platform.`,
     location: {
       city: `Chicago, IL`,
       logo: `eventcreate`,
       name: `EventCreate`,
     },
     tags: ["startup", "remote", "react", "rails", "saas", "b2b"],
-    title: "Senior Front-End Software Engineer",
+    title: "Staff Frontend Software Engineer",
     url: "https://eventcreate.com/",
   },
   {
     dates: [`May 2022`, `Sep 2024`],
-    details: `•  Transformed front-end development practices by redesigning architecture, enforcing best practices in development, and fostering a collaborative and agile environment through strong leadership, while leveraging client-side technologies such as React, Ruby on Rails, and GraphQL.
-
-•  Collaborated with cross-functional teams, including Head of Product, Product Designer, Quality Assurance Lead and Head of Customer Success to translate business needs into technical requirements to effectively deliver best-in-class user experiences under tight deadlines.
-
-•  Guided and supported a team of 4 Front-End Developers, holding regular 1-on-1 meetings to ensure their professional growth and performance. Played a key role in performance reviews and the development of personal growth plans. Cultivated a psychologically safe environment to boost team well-being and drive peak productivity.
-
-• Redesigned the front-end architecture by creating a JSON theme in the codebase that styled the default Material UI components to match those designed in Figma by the Product Designer, streamlining component consistency and boosting developer productivity by 40%.
-
-• Established and enforced front-end development best practices with React, ESLint, and Prettier, ensuring accurate component utilization, type definition, minimal code duplication, and IDE extension support to automatically fix coding issues.
-
-• Revamped Product & Development Team processes by serving as the Scrum Master and introducing daily stand-ups, sprint planning, retrospectives, reviews, and backlog grooming, integrating JIRA with Slack and GitHub, and automating tasks to boost team collaboration and improve overall efficiency, thus increasing productivity metrics by 50%.
-
-• Identified and analyzed performance bottlenecks using Lighthouse, Chrome DevTools and Sentry, then refactored the code with Vite, React Query and GraphQL, implementing specialized tooling for enhanced speed and responsiveness, ultimately reducing the rendering speed by 5000ms.
-
-• Optimized discoverability and onboarding processes by developing documentation and setting coding standards, integrating version control and real-time collaboration mechanisms with Notion and Fibery, thereby facilitating seamless integration of document templates and automations.
-
-• Developed and submitted proposals for both technical and non-technical innovations, meticulously documented research initiatives, designed Proof of Concepts (POCs), and collected anonymous feedback to refine and inform strategic decision-making processes for management and stakeholders.
-
-• Implemented and refined many features on the Five to Nine platform, enhancing event communications to include functionalities such as scheduling, editing, and previewing across Slack, Email, and Calendar, thereby reducing tool fatigue, and significantly improving user experience and engagement at corporate events.
-
-
-•  Organized monthly team-building events for an international team, boosting cohesion and morale through virtual activities.
-• Streamlined event creation user experience by requiring only basic details before publishing, decreasing the drop-off rate by 60%.
-
-• Configured React and Ruby on Rails applications to use GraphQL, automating type and mutation creation in RoR with codegens from Active Record models, and applying these as type definitions for GraphQL queries in React.
-
-• Developed reusable custom components and React Hooks for image uploading, dynamic placeholder generation, cropping, REST API interactions, and GraphQL query handling.
-
-• Ensured compliance with WCAG, Section 508, and A11Y accessibility standards by integrating AudioEye, utilizing A11Y checklists, and employing Eslint plugins.`,
+    overview: `Led front-end development and team processes at a B2B SaaS startup, enhancing user experience and performance through innovative solutions and strong leadership.`,
+    details: `•  Developed high-scale invitation engine in TypeScript, React, TanStack, and MUI, allowing organizers to invite from 100k+ individuals, groups, and/or Slack Channels, managing complex state, scheduling logic, and real-time guest list updates from Zoom and in-person QR check-ins, increasing Net Promoter Score by 40%.
+    • Designed and built drag-and-drop survey builder with conditional logic using TypeScript, React, MUI, Axios, and TanStack React Query, multi-channel automated distribution (Slack, email, QR code, RSVP), real-time analytics, and built-in templates, decreasing survey management time by 40% and increasing attendee engagement by 35%.
+    • Adopted GraphQL across TypeScript, React, and Ruby on Rails, utilizing automated schema/type generation from ActiveRecord models and standardizing custom React Hooks to reduce feature delivery time by 40%, eliminate client/server contract bugs through end-to-end type safety, and improve rendering performance by 65%.
+    • Re-architected complex multi-step event creation workflow into unified, dynamic form using TypeScript, React, MUI, and TanStack React Query, with advanced validation and dependency logic, reusable composite form components, and integrations with Zoom, Google Meet, and Cloudinary to reduce event creation drop-off rate by 50%.
+    • Implemented real-time guest list updates and notifications using WebSockets and server-sent events, enhancing user experience and engagement during events.`,
     location: {
       city: `Chicago, IL`,
       logo: `fivetonine`,
       name: `Five to Nine`,
     },
     tags: ["startup", "remote", "react", "rails", "saas", "b2b"],
-    title: "Lead Front-End Software Engineer",
+    title: "Staff Frontend Software Engineer",
     url: "https://fivetonine.co/",
   },
   {
     dates: ["Jun 2020", "Apr 2022"],
-    details: `•  Played a pivotal role in the Software Development Life Cycle by leading front-end modernization, enhancing user engagement through innovative features, and mentoring developers to improve code quality, utilizing web frameworks and interactive technologies.
-
-• Directed the transformation of Rails HAML views into React components, modernizing the front end by deploying React and establishing a clear MVC architecture separation of concerns, thereby improving system architecture data throughput.
-
-• Build the Action Center with React to incorporate dynamic notification features, integrate real-time updates, and facilitate event-driven interactions, thereby boosting user engagement, elevating click-through and profile completion by 40%.
-
-• Integrated third-party calendar functionality via Nylas, allowing schedulers to view actual availability directly within the platform and offering timeslot suggestions based on real-time availability, which streamlined the interview scheduling process.
-
-• Crafted shared components with React, applying reusable code and a component-based architecture to maintain UI/UX consistency.
-
-• Consolidated and organized team and project knowledge from GitHub READMEs and wikis, Nuclino, and Google Docs into a unified repository in Notion, improving discoverability and ensuring consistency through strategic template use.
-
-• Implemented and refined front-end test suites, using Snapshot comparison and DOM testing with Jest and React Testing Library, ensuring functionality and compliance with accessibility standards, reducing UI bugs by 30%.
-
-• Managed build and deployment processes with Webpack, Jenkins, Git Hooks, and automated testing, streamlining development workflow and reducing deployment risks.
-
-• Guided developers through Pair Programming sessions, Technical Workshops, Best Practice seminars, and regular one-on-one meetings, providing tailored career guidance to establish clear objectives and recognize growth opportunities.
-
-•  Established the Culture Committee at a rapidly growing company, researching remote work strategies to foster an inclusive team culture, thereby boosting cohesiveness and morale.
-
-•  Led the Diverse Talent Clouds initiative, advancing talent matching diversity and enabling users to multidimensionally organize and access candidate information.`,
+    overview: `Played a key role in front-end modernization and team development at a high-growth B2B and B2C SaaS startup, enhancing user engagement and operational efficiency through innovative solutions and strong leadership.`,
+    details: `• Developed scalable JavaScript and React-based talent marketplace and notification systems for recruiters supporting 500k+ users, enabling faster talent discovery and increasing customer time-to-value by an estimated 60%.
+    • Led implementation of redesigned marketing site and core engagement features using JavaScript, React, and Ruby on Rails, improving Lighthouse scores by 30+ points, reducing page load time by 25%, and increasing conversion by 22%.
+    • Integrated 3rd-party calendar functionality via Nylas API using JavaScript and React, allowing recruiters to view actual availability and offer timeslot suggestions based on real-time availability, streamlining interview scheduling by 3X.`,
     location: {
       city: "Chicago, IL",
       logo: "tmp",
       name: "The Mom Project",
     },
     tags: ["startup", "remote", "react", "rails", "saas", "b2b", "b2c"],
-    title: "Senior Software Engineer",
+    title: "Staff Frontend Software Engineer",
     url: "https://www.themomproject.com/",
   },
   {
     dates: ["Jun 2016", "Jan 2020"],
-    details: `•  Directed Agile processes and coached the Development Team as a Scrum Master, translating user stories, overseeing backlogs, and conducting standups, thus improving project delivery and elevating code quality.
-
-•  Liaised closely with Developers, UX/UI Designers, Testers, and Product Managers to gather feedback, refine requirements, and ensure the product continued to meet user needs.
-
-• Implemented Angular Material to standardize UI/UX, reducing reliance on custom CSS and speeding up the design process, thus allowing developers to focus on optimizing user interaction and streamlining product navigation, consequently shortening deployment time by 2 days.
-
-• Revamped the platform by upgrading from AngularJS to Angular, incorporating lazy loading, modularity, and dependency injection, utilizing TypeScript, RxJS, Ionic, and Angular Material to improve scalability, maintainability, and performance.
-
-• Developed a cross-platform mobile app with Ionic, integrating UI components, native functionalities such as camera access, file management, and notifications, and ensured data binding, while utilizing Cloud Services and CI/CD pipelines, thus expanding user reach and uniformity across iOS and Android platforms.
-
-• Developed and recorded coding guidelines that improved readability and consistency across feature modules, team contributions, and software updates, thereby streamlining code integration processes.
-
-• Analyzing front-end performance using BrowserStack and Google PageSpeed Insights, implemented lazy loading and code splitting, and enhanced load times, ultimately increasing user retention by 20%.`,
+    overview: `Led front-end development and team processes at a B2E SaaS startup, enhancing user experience and performance through innovative solutions and strong leadership.`,
+    details: `• Led migration from AngularJS to modern Angular with TypeScript and RxJS, using lazy loading, modular architecture, and dependency injection to reduce UI/UX bugs by 65% and improve customer satisfaction by 75%.
+    • Developed visualizations including custom GPA vs. ACT/SAT scatter chart using TypeScript, Angular, SVG, and Google Charts to visualize historical admissions data, projected to increase student engagement by 30%.`,
     location: {
       city: "Chicago, IL",
       logo: "nexttier",
       name: "NextTier Education / Follett Corporation",
     },
     tags: ["startup", "angular", "saas", "b2e"],
-    title: "Lead Front-End Software Engineer",
+    title: "Staff Frontend Software Engineer",
     url: "https://www.nexttier.com/",
   },
   {
     dates: ["Jun 2012", "Jun 2016"],
-    details: `•  Leveraged skills in Full-Stack Web Development and UI/UX Design to build performant, secure, and scalable digital solutions enhancing user engagement and operational efficiency across Healthcare, Insurance, Energy, Mergers & Acquisitions, and Banking sectors.
-
-• Developed an interactive dashboard tailored for a financial organization by integrating Google Charts and Bootstrap using SASS, focusing on user interface enhancement and interaction optimization.
-
-• Implemented ConnectTheGrid's front-end with AngularJS and Bootstrap, integrating two-way data binding, custom iconography, real-time charts, and complex form validation, improving consumer engagement and platform accessibility.
-
-• Guided Junior Developers and interns in technical skills and best practices, improving code quality and team efficiency, while offering career advice and identifying opportunities for growth.`,
+    overview: `Delivered full-stack web solutions for clients across various industries, enhancing user engagement and operational efficiency through innovative digital solutions and strong technical expertise.`,
+    details: `• Built and/or enhanced 12+ performant, secure, and scalable digital solutions for client projects across Healthcare, Insurance, Energy & Utilities, Mergers & Acquisitions, and Banking sectors using .NET (C#), JavaScript, and AngularJS.
+    • Led front-end development using JavaScript and AngularJS of product for utility companies to streamline clean energy adoption process to build role-based dashboards, dynamic forms, forecasting visualizations, and data tables for providers, contractors, reviewers, and customers, increasing transparency and efficiency by 70%.`,
     location: {
       city: "Chicago, IL",
       logo: "wmp",
       name: "West Monroe Partners",
     },
     tags: ["consulting", "microsoft", "angular", "b2b"],
-    title: "Senior Technology Consultant",
+    title: "Senior Frontend Software Engineer",
     url: "https://www.westmonroepartners.com/",
   },
 ].map((e) => ({
